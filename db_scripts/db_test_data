@@ -1,0 +1,7 @@
+
+var myLeagues = [
+    {"leagueID": 1, "accessCode":"0","leagueName":"Global", "open":true, "password":""},
+    {"leagueID": 2, "accessCode":"AF2UB","leagueName":"TestClosedLeague", "open":false, "password":"password"}
+];
+
+db.League.insert(myLeagues);
