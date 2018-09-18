@@ -9,7 +9,7 @@ var MongoClient = require('mongodb').MongoClient;
 
 MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true }, function (err, client) {
 
-  app.set('myDb', client.db('test'));
+  app.set('myDb', client.db('MightyDucks6'));
 
 });
 
