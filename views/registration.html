@@ -11,7 +11,7 @@
     <div class="container">
         <h1>Registration</h1>
 
-        <form action="" id=frmLogin>
+        <form action="" id="frmRegister">
                 <div>
                     <label for="firstname">First Name: </label>
                     <input type="text" name="firstName" id="firstName" required>
@@ -28,13 +28,20 @@
                 </div>  
 
                 <div>
-                    <label for="username">Username: </label>
-                    <input type="text" name="username" id="username" required>
+                    <label for="persona">Persona: </label>
+                    <input type="text" name="persona" id="persona" required>
                 </div>  
+
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                    <img src="images/error.png" alt="" srcset="" width="20px" height="20px" style="display: none;" id="passwordImg">
+                </div>
 
                 <div>
                     <label for="password">Password: </label>
                     <input type="password" name="password" id="password" required>
+                    <img src="images/error.png" alt="" srcset="" width="20px" height="20px" style="display: none;" id="passwordConfirmImg">
                 </div>
 
                 <div>
@@ -56,4 +63,6 @@
         </form>
     </div>
 </body>
+
+<script src="js/register.js"></script>
 </html>
