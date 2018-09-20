@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var path = require("path");
-var userControllers = require('../controllers/userController.js');
-var leaderboardControllers = require('../controllers/leaderboardController.js');
 
 var router = function(app) {
     //put all the routes
@@ -16,17 +14,9 @@ var router = function(app) {
     app.route("/registration").get(function(req, res) {
         res.sendFile(path.resolve('views/registration.html'));
     });
-<<<<<<< HEAD
-    app.route("/scorecards").get(function(req, res) {
-        res.sendFile(path.resolve('views/scorecards.html'));
+    app.route("/scorecard").get(function(req, res) {
+        res.sendFile(path.resolve('views/scorecard.html'));
     });
-=======
-    
-    app.route('/api/getAllLeaderboards').get((req,res) => {
-        leaderboardControllers.getAllLeaderboards(app,req,res);
-    });
-    
->>>>>>> master
 };
 
 module.exports = router;
