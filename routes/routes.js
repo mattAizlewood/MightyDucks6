@@ -6,7 +6,7 @@ var userControllers = require('../controllers/userController.js');
 
 var router = function(app) {
     app.route('/login')
-    .post((req,res) => userControllers.viewSingle(app,req,res))
+    .post((req,res) => userControllers.login(app,req,res))
     
     app.route('/registration')
     .post((req,res) => userControllers.register(app,req,res))

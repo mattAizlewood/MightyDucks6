@@ -1,11 +1,18 @@
 module.exports = {
-    viewSingle: function(app, req, res){
-        let email = req.body.email;
-        app.get('myDb').collection('userCollection').find({"email": email}).toArray(function (err, docs) {
+    login: function(app, req, res){
+        let email = req.body.email; 
+        app.get('myDb').collection('userCollection').findOne({"email": email},function (err, user) {
             if (err) {
                 console.error(err)
             }
-            res.json(docs)
+            else if(user != null && user.password === req.body.password){
+                res.redirect('/leaderboards.html');
+            }
+            else{
+                console.info("invalid password or email");
+            }
+            
+            //console.info(user);
         })
         //res.send(`view staff record: ${staffId}`);
     },

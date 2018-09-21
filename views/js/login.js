@@ -18,19 +18,12 @@
                 'Content-Type': 'application/json'
             }
         })
-        .then(function(response){
-            return response.json();
+         .then(function(response){
+             return response;
         })
         .then(function(myData){
-            console.dir(myData);
-            
-            if(myData[0].password === formData.password)
-            {
-                console.info("logged in");
-            }
-            else{
-                console.info("login failed");
-            }
+           // console.dir(myData);
+            window.location.href = myData.url;
         })
     })
 })();
