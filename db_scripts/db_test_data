@@ -7,38 +7,5 @@ var myLeagues = [
 db.League.insert(myLeagues);
 
 var scorecards = [
-    {
-        "scorecardID" : 1,
-        "homeTeam1": "Toronto Maple Leafs",
-        "awayTeam1": "Boston Bruins",
-        "homeTeam2": "Montreal Canadiens",
-        "awayTeam2": "Edmonton Oilers",
-        "homeTeam3": "Vancouver Canucks",
-        "awayTeam3": "Chicago Blackhawks",
-        "homeTeam4": "New York Rangers",
-        "awayTeam4": "Vegas Golden Knights",
-        "homeTeam5": "Washington Capitals",
-        "awayTeam5": "Pittsburgh Penguins",
-        "homeTeam6": "Ottawa Senators",
-        "awayTeam6": "Philadelphia Flyers"
-    },
-    { 
-        "scorecardID": 2, 
-        "homeTeam1": "San Jose Sharks", 
-        "awayTeam1": "Detroit Red Wings", 
-        "homeTeam2": "Calgary Flames", 
-        "awayTeam2": "Buffalo Sabres", 
-        "homeTeam3": "New York Islanders", 
-        "awayTeam3": "Tampa Bay Lightning", 
-        "homeTeam4": "Winnipeg Jets", 
-        "awayTeam4": "Anaheim Ducks", 
-        "homeTeam5": "Los Angeles Kings", 
-        "awayTeam5": "New Jersey Devils", 
-        "homeTeam6": "Nashville Predators", 
-        "awayTeam6": "Carolina Hurricanes"
-    };
-]
 
-db.Scorecards.insert(scorecards);
-
-nhlTeams= ["Anaheim Ducks", "Arizona Coyotes", "Boston Bruins", "Buffalo Sabres", "Calgary Flames", "Carolina Hurricanes", "Chicago Blackhawks", "Colorado Avalanche", "Columbus Blue Jackets", "Dallas Stars", "Detroit Red Wings", "Edmonton Oilers", "Florida Panthers", "Los Angeles Kings", "Minnesota Wild", "Montreal Canadiens", "Nashville Predators", "New Jersey Devils", "New York Islanders", "New York Rangers", "Ottawa Senators", "Philadelphia Flyers", "Pittsburgh Penguins", "San Jose Sharks", "St Louis Blues", "Tampa Bay Lightning", "Toronto Maple Leafs", "Vancouver Canucks", "Vegas Golden Knights", "Washington Capitals", "Winnipeg Jets"]
+];

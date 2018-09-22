@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require('fs');
 var path = require("path");
 var userControllers = require('../controllers/userController.js');
-var scorecardsController = require('../controllers/scorecardsController')
+var scorecardControllers = require('../controllers/scorecardController.js')
  
 var router = function(app) {
     app.route('/login')
@@ -13,7 +13,7 @@ var router = function(app) {
     .post((req,res) => userControllers.register(app,req,res))
 
     app.route("/scorecard")
-    .post((req, res) => scorecardsController.addScorecard(app, req, res));    
+    .post((req, res) => scorecardControllers.addScorecard(app, req, res));    
 };
 
 module.exports = router;

@@ -5,8 +5,8 @@ module.exports = {
         app.get('myDb').collection('scorecards').insertOne(scorecard, function (err, docs) {
             if (err) {
                 console.log(err);
-            }
-            res.json({ 'msg': 'Scorecard Added' });
+            } 
+            res.json({ 'msg': 'Scorecard Record Added' });
         });
     }
 };
