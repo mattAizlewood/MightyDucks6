@@ -1,12 +1,12 @@
 module.exports = {
-    addScorecard: function (app, req, res) {
-        let scorecard = req.body;
+    populateScorecard: function (app, req, res) {
 
-        app.get('myDb').collection('scorecards').insertOne(scorecard, function (err, docs) {
+        app.get('myDb').collection('scorecard').findOne( function (err, scorecardResults) {
             if (err) {
-                console.log(err);
-            } 
-            res.json({ 'msg': 'Scorecard Record Added' });
+                console.error(err)
+            }
+            
+            res.json(scorecardResults);
         });
     }
-};
+}

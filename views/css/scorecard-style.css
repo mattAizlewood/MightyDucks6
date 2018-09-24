@@ -1,0 +1,114 @@
+#match_1 {
+    position: relative;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+    left: 150px;
+}
+
+#team_1 {
+    position: relative; 
+}
+
+#team_2 {
+    position: relative;
+    left: 115px;
+}
+
+#match_2 {
+    position: relative;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+    left: 750px;
+    bottom: 240px;
+}
+
+#team_3 {
+    position: relative; 
+}
+
+#team_4 {
+    position: relative;
+    left: 115px;
+}
+
+#match_3 {
+    position: relative;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+    left: 150px;
+    bottom: 150px;
+}
+
+#team_5 {
+    position: relative; 
+}
+
+#team_6 {
+    position: relative;
+    left: 115px;
+}
+
+#match_4 {
+    position: relative;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+    left: 750px;
+    bottom: 390px;
+}
+
+#team_7 {
+    position: relative; 
+}
+
+#team_8 {
+    position: relative;
+    left: 115px;
+}
+
+#match_5 {
+    position: relative;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+    left: 150px;
+    bottom: 300px;
+}
+
+#team_9 {
+    position: relative; 
+}
+
+#team_10 {
+    position: relative;
+    left: 115px;
+}
+
+#match_6 {
+    position: relative;
+    border: 1px solid black;
+    padding: 5px;
+    width: 500px;
+    left: 750px;
+    bottom: 540px;
+}
+
+#team_11 {
+    position: relative; 
+}
+
+#team_12 {
+    position: relative;
+    left: 115px;
+}
+
+#versus {
+    position: relative;
+    left: 60px;
+    bottom: 40px;
+}
+
+

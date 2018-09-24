@@ -1,11 +1,54 @@
 
-var myLeagues = [
-    {"leagueID": 1, "accessCode":"0","leagueName":"Global", "open":true, "password":""},
-    {"leagueID": 2, "accessCode":"AF2UB","leagueName":"TestClosedLeague", "open":false, "password":"password"}
+var scorecardData = [
+    {
+        "roundID": 1,
+        "roundInfo": {
+            "date": "17-09-2018",
+            "match1": { "home": "Boston Bruins", "away": "Buffalo Sabres" },
+            "match2": { "home": "Detroit Red Wings", "away": "Florida Panthers" },
+		    "match3": { "home": "Montreal Canadiens", "away": "Ottawa Senators" },
+		    "match4": { "home": "Tampa Bay Lightning", "away": "Toronto Maple Leafs" },
+		    "match5": { "home": "Carolina Hurricanes", "away": "Columbus Blue Jackets" },
+		    "match6": { "home": "New Jersey Devils", "away": "Philadelphia Flyers" } 
+        }
+    }
 ];
 
-db.League.insert(myLeagues);
+db.scorecard.insert(scorecardData);
 
-var scorecards = [
-
+var predictionsData = [
+    { 
+        "roundID" : 1, 
+        "roundPredictions": {
+            "match1" : { "home" : 3, "away" : 5 }, 
+            "match2" : { "home" : 6, "away" : 1 }, 
+            "match3" : { "home" : 1, "away" : 0 }, 
+            "match4" : { "home" : 0, "away" : 7 }, 
+            "match5" : { "home" : 4, "away" : 6 }, 
+            "match6" : { "home" : 4, "away" : 3 }, 
+            "firstScorer" : 34 
+        },
+        "roundID" : 2, 
+        "roundPredictions": {
+            "match1" : { "home" : 2, "away" : 2 }, 
+            "match2" : { "home" : 2, "away" : 4 }, 
+            "match3" : { "home" : 0, "away" : 5 }, 
+            "match4" : { "home" : 0, "away" : 8 }, 
+            "match5" : { "home" : 1, "away" : 3 }, 
+            "match6" : { "home" : 3, "away" : 1 }, 
+            "firstScorer" : 5
+        } ,
+        "roundID" : 3, 
+        "roundPredictions": {
+            "match1" : { "home" : 1, "away" : 1 }, 
+            "match2" : { "home" : 2, "away" : 2 }, 
+            "match3" : { "home" : 3, "away" : 3 }, 
+            "match4" : { "home" : 4, "away" : 4 }, 
+            "match5" : { "home" : 5, "away" : 5 }, 
+            "match6" : { "home" : 6, "away" : 6 }, 
+            "firstScorer" : 12 
+        }  
+    }
 ];
+
+db.predictions.insert(predictionsData);
