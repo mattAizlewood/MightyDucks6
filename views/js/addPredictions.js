@@ -33,7 +33,7 @@
         let awayTeam6FinalScore = parseInt(document.getElementById('away_team_6_score').value);
 
         //Tie Breaker
-        let firstScorerMinute = parseInt(document.getElementById('all_matches_first_score_minute').value);
+        let firstScorerMinutes = parseInt(document.getElementById('all_matches_first_score_minute').value);
 
         let predictionsFormData = {
             "roundID": 0,
@@ -62,7 +62,7 @@
                     "home": homeTeam6FinalScore,
                     "away": awayTeam6FinalScore,
                 },
-                "firstScorerMinute": firstScorerMinute
+                "firstScorerMinutes": firstScorerMinutes
             }
         };
 
