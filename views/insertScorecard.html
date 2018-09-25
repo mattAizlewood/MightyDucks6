@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert Scorecard Results</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Predictions Page Title -->
+    <h1 id="scorecard_results_header_1">Insert Scorecard</h1>
+
+    <!-- Navigation Bar -->
+    <nav id="nav_bar">
+        <ul id="nav_bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="results.html">Result</a></li>
+            <li><a href="leaderboards.html">Leaderboards</a></li>
+            <li><a href="scorecard.html">Scorecard</a></li>
+            <li><a href="predictions.html">Predictions</a></li>
+            <li><a href="leagues.html">Leagues</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <form id="scorecard_form">
+        <div id="scorecard_content">
+            <p><label for="date">Date: </label><input type="date" name="date" id="date" required></p>
+            <p><label for="team_1">Home Team 1: </label><input type="text" name="team_1" id="team_1" required></p>
+            <p><label for="team_2">Away Team 1: </label><input type="text" name="team_2" id="team_2" required></p>
+            <p><label for="team_3">Home Team 2: </label><input type="text" name="team_3" id="team_3" required></p>
+            <p><label for="team_4">Away Team 2: </label><input type="text" name="team_4" id="team_4" required></p>
+            <p><label for="team_5">Home Team 3: </label><input type="text" name="team_5" id="team_5" required></p>
+            <p><label for="team_6">Away Team 3: </label><input type="text" name="team_6" id="team_6" required></p>
+            <p><label for="team_7">Home Team 4: </label><input type="text" name="team_7" id="team_7" required></p>
+            <p><label for="team_8">Away Team 4: </label><input type="text" name="team_8" id="team_8" required></p>
+            <p><label for="team_9">Home Team 5: </label><input type="text" name="team_9" id="team_9" required></p>
+            <p><label for="team_10">Away Team 5: </label><input type="text" name="team_10" id="team_10" required></p>
+            <p><label for="team_11">Home Team 6: </label><input type="text" name="team_11" id="team_11" required></p>
+            <p><label for="team_12">Away Team 6: </label><input type="text" name="team_12" id="team_12" required></p>
+        </div>
+        <div>
+            <p><input type="submit" id="insert_scorecard" value="Insert Scorecard"></p>
+        </div>
+    </form>
+</body>
+<script src="js/insertScorecard.js"></script>
+
+</html>

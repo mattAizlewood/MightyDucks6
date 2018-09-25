@@ -4,15 +4,14 @@ var fs = require('fs');
 var path = require("path");
 var scorecardControllers = require('../controllers/scorecardController.js');
 
-var router = function(app) {
-    app.route("/scorecard").get(function(req,res) {
+var router = function (app) {
+
+    app.route("/scorecard").get(function (req, res) {
         res.sendFile(path.resolve('views/scorecard.html'));
     });
-    
-    app.route('/insertScorecardResults').get((req,res) => {
-        scorecardControllers.insertScorecardResults(app,req,res);
-    });
-    
+
+    app.route('/scorecard')
+        .get((req, res) => scorecardControllers.populateScorecard(app, req, res))
 };
 
 module.exports = router;
