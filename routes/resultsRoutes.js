@@ -17,6 +17,10 @@ var router = function(app) {
 
     app.route('/api/insertScoreCard').post((req,res) => {
         resultsControllers.insertScoreCard(app,req,res);
-    })
+    });
+
+    app.route('/api/getLatestScoreCard').get((req,res) => {
+        resultsControllers.getLatestScoreCard(app,req,res);
+    });
 }
 module.exports = router;

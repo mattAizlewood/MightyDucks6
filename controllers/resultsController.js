@@ -71,5 +71,16 @@ module.exports = {
 
             }
         });
+    },
+
+    getLatestScoreCard: (app,req,res) => {
+        app.get('myDb').collection('scorecard').find().sort({'roundId':-1}).limit(1).toArray((err,docs) => {
+            if(err) {
+                console.log(err);
+            }
+            else {
+                res.json(docs);
+            }
+        });
     }
 }
