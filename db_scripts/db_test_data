@@ -60,11 +60,7 @@ var resultsData = [
    {
        "roundId": 2,
        roundInfo: {
-<<<<<<< HEAD
-       "date": "17-10-2018",
-=======
        "date": "17-09-2018",
->>>>>>> Matt
        "match1": { "matchID": 1, "homeTeam": { "name": "Boston Bruins", "score": 1 }, "awayTeam": { "name": "Chicago Blackhawks", "score": 5 } },
        "match2": { "matchID": 2, "homeTeam": { "name": "Carolina Hurricanes", "score": 4 }, "awayTeam": { "name": "Anaheim Ducks", "score": 3 } },
        "match3": { "matchID": 3, "homeTeam": { "name": "Vegas Golden Knights", "score": 5 }, "awayTeam": { "name": "Toronto Maple Leafs", "score": 2 } },
@@ -73,49 +69,6 @@ var resultsData = [
        "match6": { "matchID": 6, "homeTeam": { "name": "New York Rangers", "score": 1 }, "awayTeam": { "name": "Calgary Flames", "score": 1 } },
        "firstScorerMinutes": 1   }}];
 db.results.insert(resultsData);
-
-<<<<<<< HEAD
-  var scorecardData = [
-      {
-          "roundID": 0,
-          "roundInfo": {
-              "date": "17-09-2018",
-              "match1": { "home": "Boston Bruins", "away": "Buffalo Sabres" },
-              "match2": { "home": "Detroit Red Wings", "away": "Florida Panthers" }, 
-              "match3": { "home": "Montreal Canadiens", "away": "Ottawa Senators" },
-              "match4": { "home": "Tampa Bay Lightning", "away": "Toronto Maple Leafs" },
-              "match5": { "home": "Carolina Hurricanes", "away": "Columbus Blue Jackets" },
-              "match6": { "home": "New Jersey Devils", "away": "Philadelphia Flyers" }
-          }
-      },
-      {
-          "roundID": 1,
-          "roundInfo": {
-              "date": "24-09-2018",
-              "match1": { "home": "Chicago Blackhawks", "away": "Vegas Golden Knights" },
-              "match2": { "home": "Colorado Avalanche", "away": "Vancouver Canucks" },
-              "match3": { "home": "Dallas Stars", "away": "San Jose Sharks" },
-              "match4": { "home": "Minnesota Wild", "away": "Los Angeles Kings" },
-              "match5": { "home": "St. Louis Blues", "away": "Edmonton Oilers" },
-              "match6": { "home": "Winnipeg Jets", "away": "Calgary Flames" }
-           }
-      },
-      {
-          "roundID": 2,
-          "roundInfo": {
-              "date": "01-10-2018",
-              "match1": { "home": "Pittsburgh Penguins", "away": "Arizona Coyotes" },
-              "match2": { "home": "Nashville Predators", "away": "Buffalo Sabres" },
-              "match3": { "home": "New York Islanders", "away": "New York Rangers" },
-               "match4": { "home": "San Jose Sharks", "away": "Florida Panthers" },
-               "match5": { "home": "Anaheim Ducks", "away": "Philadelphia Flyers" },
-               "match6": { "home": "Winnipeg Jets", "away": "Ottawa Senators" }
-          }
-      }
-];
-
-db.scorecards.insert(scorecardData);
-=======
 
 var scorecardDatum = {
                     'roundId':0,
@@ -130,4 +83,30 @@ var scorecardDatum = {
                     }
                 };
 db.scorecard.insert(scorecardDatum)
->>>>>>> Matt
+
+var predictionsData1 = [
+    {
+        'roundId': 0,
+        'predictionsInfo': {
+            "match1": { "homeTeam1Score": 5, "awayTeam1Score": 3 },
+            "match2": { "homeTeam2Score": 0, "awayTeam2Score": 1 },
+            "match3": { "homeTeam3Score": 4, "awayTeam3Score": 3 },
+            "match4": { "homeTeam4Score": 2, "awayTeam4Score": 4 },
+            "match5": { "homeTeam5Score": 2, "awayTeam5Score": 2 },
+            "match6": { "homeTeam6Score": 4, "awayTeam6Score": 6 },
+            "firstScorerMinutes": 24
+        }
+    },
+    {
+        'roundId': 1,
+        'predictionsInfo': {
+            "match1": { "homeTeam1Score": 2, "awayTeam1Score": 0 },
+            "match2": { "homeTeam2Score": 3, "awayTeam2Score": 3 },
+            "match3": { "homeTeam3Score": 1, "awayTeam3Score": 4 },
+            "match4": { "homeTeam4Score": 3, "awayTeam4Score": 2 },
+            "match5": { "homeTeam5Score": 2, "awayTeam5Score": 5 },
+            "match6": { "homeTeam6Score": 1, "awayTeam6Score": 1 },
+            "firstScorerMinutes": 5
+        }
+    }
+];

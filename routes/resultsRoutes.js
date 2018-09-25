@@ -15,12 +15,6 @@ var router = function (app) {
         resultsControllers.insertScoreCardResults(app, req, res);
     });
 
-<<<<<<< HEAD
-    app.route('/api/insertScoreCard').post((req, res) => {
-        resultsControllers.insertScoreCard(app, req, res);
-
-    })
-=======
     app.route('/api/insertScoreCard').post((req,res) => {
         resultsControllers.insertScoreCard(app,req,res);
     });
@@ -28,6 +22,5 @@ var router = function (app) {
     app.route('/api/getLatestScoreCard').get((req,res) => {
         resultsControllers.getLatestScoreCard(app,req,res);
     });
->>>>>>> Matt
 }
 module.exports = router;

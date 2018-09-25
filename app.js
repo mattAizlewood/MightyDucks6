@@ -3,7 +3,7 @@ var path = require('path');
 var express = require('express');
 var app = express();
 var routes = require('./routes/routes');
-var scorecardRoutes = require('./routes/scorecardRoutes');
+var predictionRoutes = require('./routes/predictionRoutes');
 var leaderboardsRoutes = require('./routes/leaderboardsRoutes');
 var resultsRoutes = require('./routes/resultsRoutes');
 //Import the mongoose module
@@ -28,8 +28,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'vue');
 
 routes(app);
-scorecardRoutes(app);
 leaderboardsRoutes(app);
+predictionRoutes(app);
 resultsRoutes(app);
 
 app.listen(3000);

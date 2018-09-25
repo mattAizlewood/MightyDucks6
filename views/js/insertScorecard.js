@@ -16,18 +16,18 @@ button.addEventListener('click', (ev) => {
         },
         "data": {
             "date": document.getElementById('date').value,
-            "home1": document.getElementById('team_1').value,
-            "away1": document.getElementById('team_2').value,
-            "home2": document.getElementById('team_3').value,
-            "away2": document.getElementById('team_4').value,
-            "home3": document.getElementById('team_5').value,
-            "away3": document.getElementById('team_6').value,
-            "home4": document.getElementById('team_7').value,
-            "away4": document.getElementById('team_8').value,
-            "home5": document.getElementById('team_9').value,
-            "away5": document.getElementById('team_10').value,
-            "home6": document.getElementById('team_11').value,
-            "away6": document.getElementById('team_12').value
+            "home1": document.getElementById('home_1_option').value,
+            "away1": document.getElementById('away_1_option').value,
+            "home2": document.getElementById('home_2_option').value,
+            "away2": document.getElementById('away_2_option').value,
+            "home3": document.getElementById('home_3_option').value,
+            "away3": document.getElementById('away_3_option').value,
+            "home4": document.getElementById('home_4_option').value,
+            "away4": document.getElementById('away_4_option').value,
+            "home5": document.getElementById('home_5_option').value,
+            "away5": document.getElementById('away_5_option').value,
+            "home6": document.getElementById('home_6_option').value,
+            "away6": document.getElementById('away_6_option').value
         }
     }
 

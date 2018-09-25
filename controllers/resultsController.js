@@ -68,15 +68,13 @@ module.exports = {
                         "match6": { "matchID": 6, "homeTeam6": req.body.home6, "awayTeam6": req.body.away6 },
                     }
                 });
-
-                console.info(req.body.home1);
             }
         });
     },
 
-    getLatestScoreCard: (app,req,res) => {
-        app.get('myDb').collection('scorecard').find().sort({'roundId':-1}).limit(1).toArray((err,docs) => {
-            if(err) {
+    getLatestScoreCard: (app, req, res) => {
+        app.get('myDb').collection('scorecard').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
+            if (err) {
                 console.log(err);
             }
             else {
