@@ -5,10 +5,15 @@ module.exports = {
             if (err) {
                 console.error(err)
             }
-            else if(user != null && user.password === req.body.password){
+            else if(user != null && user.password === req.body.password && user.status == "user"){
                 res.redirect('/leaderboards.html');
             }
+            else if (user != null && user.password === req.body.password && user.status == "admin") {
+                console.info('Admin login successful');
+                res.redirect('/settings.html');
+            }
             else{
+                console.info(user);
                 console.info("invalid password or email");
             }
             

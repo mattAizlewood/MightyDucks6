@@ -1,66 +1,5 @@
-
-var scorecardData = [
-    {
-        "roundID": 1,
-        "roundInfo": {
-            "date": "17-09-2018",
-            "match1": { "home": "Boston Bruins", "away": "Buffalo Sabres" },
-            "match2": { "home": "Detroit Red Wings", "away": "Florida Panthers" },
-		    "match3": { "home": "Montreal Canadiens", "away": "Ottawa Senators" },
-		    "match4": { "home": "Tampa Bay Lightning", "away": "Toronto Maple Leafs" },
-		    "match5": { "home": "Carolina Hurricanes", "away": "Columbus Blue Jackets" },
-		    "match6": { "home": "New Jersey Devils", "away": "Philadelphia Flyers" } 
-        }
-    }
-];
-
-<<<<<<< HEAD
-db.scorecard.insert(scorecardData);
-
-var predictionsData = [
-    { 
-        "roundID" : 1, 
-        "roundPredictions": {
-            "match1" : { "home" : 3, "away" : 5 }, 
-            "match2" : { "home" : 6, "away" : 1 }, 
-            "match3" : { "home" : 1, "away" : 0 }, 
-            "match4" : { "home" : 0, "away" : 7 }, 
-            "match5" : { "home" : 4, "away" : 6 }, 
-            "match6" : { "home" : 4, "away" : 3 }, 
-            "firstScorer" : 34 
-        },
-        "roundID" : 2, 
-        "roundPredictions": {
-            "match1" : { "home" : 2, "away" : 2 }, 
-            "match2" : { "home" : 2, "away" : 4 }, 
-            "match3" : { "home" : 0, "away" : 5 }, 
-            "match4" : { "home" : 0, "away" : 8 }, 
-            "match5" : { "home" : 1, "away" : 3 }, 
-            "match6" : { "home" : 3, "away" : 1 }, 
-            "firstScorer" : 5
-        } ,
-        "roundID" : 3, 
-        "roundPredictions": {
-            "match1" : { "home" : 1, "away" : 1 }, 
-            "match2" : { "home" : 2, "away" : 2 }, 
-            "match3" : { "home" : 3, "away" : 3 }, 
-            "match4" : { "home" : 4, "away" : 4 }, 
-            "match5" : { "home" : 5, "away" : 5 }, 
-            "match6" : { "home" : 6, "away" : 6 }, 
-            "firstScorer" : 12 
-        }  
-    }
-];
-
-db.predictions.insert(predictionsData);
-=======
-db.League.insert(myLeagues);
-
-
-
-
-
 var users = [
+     {"firstName" : "admin", "surname" : "user", "dob" : "2018-09-02", "persona" : "admin", "email" : "admin@test1.co.uk", "password" : "adminpass", "country" : "country", "status": "admin" },
     {"firstName" : "test", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test1", "email" : "test1@test1.co.uk", "password" : "1", "country" : "country" },
     {"firstName" : "test1", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test2", "email" : "test2@test2.co.uk", "password" : "cheese", "country" : "country" },
     {"firstName" : "test2", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test3", "email" : "test3@test3.co.uk", "password" : "1", "country" : "country" },
@@ -90,4 +29,84 @@ var myUsersInGlobalLeague = [
 ];
 
 db.Leaderboards.insert(myUsersInGlobalLeague);
->>>>>>> Matt
+
+var resultsData = [
+  {
+       "roundId": 0,
+       "roundInfo": {
+           "date": "24-09-2018",
+           "match1": { "matchID": 1, "homeTeam": { "name": "New York Islanders", "score": 1 }, "awayTeam": { "name": "New York Rangers", "score": 5 } },
+           "match2": { "matchID": 2, "homeTeam": { "name": "Pittsburgh Penguins", "score": 4 }, "awayTeam": { "name": "Washington Capitals", "score": 3 } },
+           "match3": { "matchID": 3, "homeTeam": { "name": "Chicago Blackhawks", "score": 5 }, "awayTeam": { "name": "Colorado Avalanche", "score": 2 } },
+           "match4": { "matchID": 4, "homeTeam": { "name": "Dallas Stars", "score": 0 }, "awayTeam": { "name": "Minnesota Wild", "score": 7 } },
+           "match5": { "matchID": 5, "homeTeam": { "name": "Nashville Predators", "score": 3 }, "awayTeam": { "name": "St. Louis Blues", "score": 2 } },
+           "match6": { "matchID": 6, "homeTeam": { "name": "Winnipeg Jets", "score": 1 }, "awayTeam": { "name": "Anaheim Ducks", "score": 1 }},
+           "firstScorerMinutes": 20
+       }
+   },
+   {
+     "roundId": 1,
+     "roundInfo": {
+         "date": "01-10-2018",
+         "match1": { "matchID": 1, "homeTeam": { "name": "Arizona Coyotes", "score": 1 }, "awayTeam": { "name": "Calgary Flames", "score": 5 } },
+         "match2": { "matchID": 2, "homeTeam": { "name": "Edmonton Oilers", "score": 4 }, "awayTeam": { "name": "Los Angeles Kings", "score": 3 } },
+         "match3": { "matchID": 3, "homeTeam": { "name": "San Jose Sharks", "score": 5 }, "awayTeam": { "name": "Vancouver Canucks", "score": 2 } },
+         "match4": { "matchID": 4, "homeTeam": { "name": "Vegas Golden Knights", "score": 0 }, "awayTeam": { "name": "Columbus Blue Jackets", "score": 7 } },
+         "match5": { "matchID": 5, "homeTeam": { "name": "Dallas Stars", "score": 3 }, "awayTeam": { "name": "Montreal Canadiens", "score": 2 } },
+         "match6": { "matchID": 6, "homeTeam": { "name": "Washington Capitals", "score": 1 }, "awayTeam": { "name": "Chicago Blackhawks", "score": 1 } },
+         "firstScorerMinutes": 33
+     }
+   },
+   {
+       "roundId": 2,
+       roundInfo: {
+       "date": "17-10-2018",
+       "match1": { "matchID": 1, "homeTeam": { "name": "Boston Bruins", "score": 1 }, "awayTeam": { "name": "Chicago Blackhawks", "score": 5 } },
+       "match2": { "matchID": 2, "homeTeam": { "name": "Carolina Hurricanes", "score": 4 }, "awayTeam": { "name": "Anaheim Ducks", "score": 3 } },
+       "match3": { "matchID": 3, "homeTeam": { "name": "Vegas Golden Knights", "score": 5 }, "awayTeam": { "name": "Toronto Maple Leafs", "score": 2 } },
+       "match4": { "matchID": 4, "homeTeam": { "name": "Winnipeg Jets", "score": 0 }, "awayTeam": { "name": "Washington Capitals", "score": 7 } },
+       "match5": { "matchID": 5, "homeTeam": { "name": "Nashville Predators", "score": 3 }, "awayTeam": { "name": "Florida Panthers", "score": 2 } },
+       "match6": { "matchID": 6, "homeTeam": { "name": "New York Rangers", "score": 1 }, "awayTeam": { "name": "Calgary Flames", "score": 1 } },
+       "firstScorerMinutes": 1   }}];
+db.results.insert(resultsData);
+
+  var scorecardData = [
+      {
+          "roundID": 0,
+          "roundInfo": {
+              "date": "17-09-2018",
+              "match1": { "home": "Boston Bruins", "away": "Buffalo Sabres" },
+              "match2": { "home": "Detroit Red Wings", "away": "Florida Panthers" }, 
+              "match3": { "home": "Montreal Canadiens", "away": "Ottawa Senators" },
+              "match4": { "home": "Tampa Bay Lightning", "away": "Toronto Maple Leafs" },
+              "match5": { "home": "Carolina Hurricanes", "away": "Columbus Blue Jackets" },
+              "match6": { "home": "New Jersey Devils", "away": "Philadelphia Flyers" }
+          }
+      },
+      {
+          "roundID": 1,
+          "roundInfo": {
+              "date": "24-09-2018",
+              "match1": { "home": "Chicago Blackhawks", "away": "Vegas Golden Knights" },
+              "match2": { "home": "Colorado Avalanche", "away": "Vancouver Canucks" },
+              "match3": { "home": "Dallas Stars", "away": "San Jose Sharks" },
+              "match4": { "home": "Minnesota Wild", "away": "Los Angeles Kings" },
+              "match5": { "home": "St. Louis Blues", "away": "Edmonton Oilers" },
+              "match6": { "home": "Winnipeg Jets", "away": "Calgary Flames" }
+           }
+      },
+      {
+          "roundID": 2,
+          "roundInfo": {
+              "date": "01-10-2018",
+              "match1": { "home": "Pittsburgh Penguins", "away": "Arizona Coyotes" },
+              "match2": { "home": "Nashville Predators", "away": "Buffalo Sabres" },
+              "match3": { "home": "New York Islanders", "away": "New York Rangers" },
+               "match4": { "home": "San Jose Sharks", "away": "Florida Panthers" },
+               "match5": { "home": "Anaheim Ducks", "away": "Philadelphia Flyers" },
+               "match6": { "home": "Winnipeg Jets", "away": "Ottawa Senators" }
+          }
+      }
+];
+
+db.scorecards.insert(scorecardData);

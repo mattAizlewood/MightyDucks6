@@ -3,6 +3,8 @@ var path = require('path');
 var express = require('express');
 var app = express();
 var routes = require('./routes/routes');
+var scorecardRoutes = require('./routes/scorecardRoutes');
+
 //Import the mongoose module
 var MongoClient = require('mongodb').MongoClient;
 // var session = require('client-sessions');
@@ -25,5 +27,5 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'vue');
 
 routes(app);
-
+scorecardRoutes(app);
 app.listen(3000);

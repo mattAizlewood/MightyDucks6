@@ -1,9 +1,17 @@
-#match_1 {
+#game_header {
     position: relative;
+    text-align: center;
+}
+
+#scorecard_column_1 {
+    display: flex;
+}
+
+#match_1 {
     border: 1px solid black;
-    padding: 5px;
     width: 500px;
-    left: 150px;
+    position: relative;
+    left: 200px;
 }
 
 #team_1 {
@@ -15,13 +23,15 @@
     left: 115px;
 }
 
+#scorecard_column_2 {
+    display: flex;
+}
+
 #match_2 {
-    position: relative;
     border: 1px solid black;
-    padding: 5px;
     width: 500px;
-    left: 750px;
-    bottom: 240px;
+    position: relative;
+    left: 200px;
 }
 
 #team_3 {
@@ -34,12 +44,10 @@
 }
 
 #match_3 {
-    position: relative;
     border: 1px solid black;
-    padding: 5px;
     width: 500px;
-    left: 150px;
-    bottom: 150px;
+    position: relative;
+    left: 200px;
 }
 
 #team_5 {
@@ -52,12 +60,10 @@
 }
 
 #match_4 {
-    position: relative;
     border: 1px solid black;
-    padding: 5px;
     width: 500px;
-    left: 750px;
-    bottom: 390px;
+    position: relative;
+    left: 200px;
 }
 
 #team_7 {
@@ -69,13 +75,15 @@
     left: 115px;
 }
 
+#scorecard_column_3 {
+    display: flex;
+}
+
 #match_5 {
-    position: relative;
     border: 1px solid black;
-    padding: 5px;
     width: 500px;
-    left: 150px;
-    bottom: 300px;
+    position: relative;
+    left: 200px;
 }
 
 #team_9 {
@@ -88,12 +96,10 @@
 }
 
 #match_6 {
-    position: relative;
     border: 1px solid black;
-    padding: 5px;
     width: 500px;
-    left: 750px;
-    bottom: 540px;
+    position: relative;
+    left: 200px;
 }
 
 #team_11 {
