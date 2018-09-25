@@ -14,5 +14,9 @@ var router = function(app) {
     app.route('/api/insertScoreCardResults').post((req,res) => {
         resultsControllers.insertScoreCardResults(app,req,res);
     });
+
+    app.route('/api/insertScoreCard').post((req,res) => {
+        resultsControllers.insertScoreCard(app,req,res);
+    })
 }
 module.exports = router;
