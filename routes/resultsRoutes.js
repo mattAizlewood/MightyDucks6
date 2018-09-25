@@ -10,5 +10,9 @@ var router = function(app) {
     app.route('/api/getAllScoreCardResults').get((req,res) => {
         resultsControllers.getAllScoreCardResults(app,req,res);
     });
+
+    app.route('/api/insertScoreCardResults').post((req,res) => {
+        resultsControllers.insertScoreCardResults(app,req,res);
+    });
 }
 module.exports = router;
