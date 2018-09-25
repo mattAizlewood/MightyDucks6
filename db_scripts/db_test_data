@@ -80,3 +80,18 @@ var resultsData = [
        "match6": { "matchID": 6, "homeTeam": { "name": "New York Rangers", "score": 1 }, "awayTeam": { "name": "Calgary Flames", "score": 1 } },
        "firstScorerMinutes": 1   }}];
 db.results.insert(resultsData);
+
+
+var scorecardDatum = {
+                    'roundId':0,
+                    'roundInfo' : {
+                        'date' : '01-10-2018',
+                        "match1": {"matchID":1, "homeTeam":'home1', "awayTeam":'away1' },
+                        "match2": {"matchID":2, "homeTeam":'home2', "awayTeam":'away2' },
+                        "match3": {"matchID":3, "homeTeam":'home3', "awayTeam":'away3' },
+                        "match4": {"matchID":4, "homeTeam":'home4', "awayTeam":'away4' },
+                        "match5": {"matchID":5, "homeTeam":'home5', "awayTeam":'away5' },
+                        "match6": {"matchID":6, "homeTeam":'home6', "awayTeam":'away6' },
+                    }
+                };
+db.scorecard.insert(scorecardDatum)

@@ -17,10 +17,15 @@ module.exports = {
             if (err) {
                 console.log(err);
             } else {
+                
+                if(docs[0].roundId === null || typeof docs[0].roundId == 'undefined') {
+                    maxID = 0;
+                } else {
                 maxID = docs[0].roundId + 1;
-                if(maxID === null || maxID === undefined) {
-                    maxID = 1;
                 }
+                
+                
+                
                 app.get('myDb').collection('results').insertOne({
                     'roundId':maxID,
                     'roundInfo': {
@@ -36,5 +41,35 @@ module.exports = {
                 });
             }
         })
+    },
+
+    insertScoreCard: (app,req,res) => {
+        app.get('myDb').collection('scorecard').find().sort({'roundId':-1}).limit(1).toArray((err,docs) => {
+            if(err) {
+                console.log(err);
+            } else {
+                
+                if(docs[0].roundId === null || typeof docs[0].roundId == 'undefined') {
+                    maxID = 0;
+                } else {
+                maxID = docs[0].roundId + 1;
+                }
+                
+
+                app.get('myDb').collection('scorecard').insertOne({
+                    'roundId':maxID,
+                    'roundInfo' : {
+                        'date' : req.body.date,
+                        "match1": {"matchID":1, "homeTeam":req.body.home1, "awayTeam":req.body.away1 },
+                        "match2": {"matchID":2, "homeTeam":req.body.home2, "awayTeam":req.body.away2 },
+                        "match3": {"matchID":3, "homeTeam":req.body.home3, "awayTeam":req.body.away3 },
+                        "match4": {"matchID":4, "homeTeam":req.body.home4, "awayTeam":req.body.away4 },
+                        "match5": {"matchID":5, "homeTeam":req.body.home5, "awayTeam":req.body.away5 },
+                        "match6": {"matchID":6, "homeTeam":req.body.home6, "awayTeam":req.body.away6 },
+                    }
+                });
+
+            }
+        });
     }
 }
