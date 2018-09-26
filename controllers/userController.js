@@ -29,5 +29,21 @@ module.exports = {
             res.json({"msg":"successful"})
         })
         //res.send(`Add a staff: ${req.body}`);
-    } 
+    },
+
+    getUser: function(app, req, res){
+        let email = req.body.email;
+
+        app.get('myDb').collection('userCollection').findOne({"email": email},function (err, user) {
+            if (err) {
+                console.error(err)
+            }
+            else if(user != null && user.password === req.body.password){
+                res.json(user);
+            }
+            else{
+                console.info("invalid password or email");
+            }
+        })
+    }
 }
