@@ -75,6 +75,7 @@ module.exports = {
                         "firstScorerMinutes": req.body.firstScorerMinutes
                     }
                 });
+                res.json({"msg":"successful"});
             }
         })
     },
@@ -104,9 +105,9 @@ module.exports = {
                         "match6": { "matchID": 6, "homeTeam": req.body.home6, "awayTeam": req.body.away6 },
                     }
                 });
-
             }
         });
+        res.json({"msg":"successful"});
     },
 
     getLatestScoreCard: (app, req, res) => {

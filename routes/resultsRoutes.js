@@ -28,8 +28,8 @@ var router = function(app) {
         resultsControllers.getAllScoreCardResults(app,req,res);
     });
 
-    app.route('/api/insertScoreCardResults').post((req,res) => {
-        resultsControllers.insertScoreCardResults(app,req,res);
+    app.route('/api/insertScoreCardResults').post((req, res) => {
+        resultsControllers.insertScorecardResults(app, req, res);
     });
 
     app.route('/api/insertScoreCard').post((req,res) => {

@@ -10,6 +10,7 @@ db.League.insert(myLeagues);
 
 
 var users = [
+     {"firstName" : "admin", "surname" : "user", "dob" : "2018-09-02", "persona" : "admin", "email" : "admin@test1.co.uk", "password" : "adminpass", "country" : "country", "status": "admin" },
     {"firstName" : "test", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test1", "email" : "test1@test1.co.uk", "password" : "1", "country" : "country" },
     {"firstName" : "test1", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test2", "email" : "test2@test2.co.uk", "password" : "cheese", "country" : "country" },
     {"firstName" : "test2", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test3", "email" : "test3@test3.co.uk", "password" : "1", "country" : "country" },

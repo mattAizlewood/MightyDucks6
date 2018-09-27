@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Insert Scorecard Results</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+        <!-- Scorecard Results Page Title -->
+        <h1 id="scorecard_results_header_1">Insert Scorecard Results</h1>
+
+        <!-- Navigation Bar -->
+        <nav id="nav_bar">
+                <ul id="nav_bar">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="results.html">Result</a></li>
+                        <li><a href="leaderboards.html">Leaderboards</a></li>
+                        <li><a href="scorecard.html">Scorecard</a></li>
+                        <li><a href="predictions.html">Predictions</a></li>
+                        <li><a href="leagues.html">Leagues</a></li>
+                        <li><a href="settings.html">Settings</a></li>
+                </ul>
+        </nav>
+
+        <form id="scorecard_results_form">
+                <p><label for="date">Date: </label><input type="date" name="date" id="date" required></p>
+                <p><label for="home_1_option">Home Team 1: </label><select name="home_1_option" id="home_1_option"
+                                required></select></p>
+                <p><label for="away_1_option">Away Team 1: </label><select name="away_1_option" id="away_1_option"
+                                required></select></p>
+                <p><label for="home_2_option">Home Team 2: </label><select name="home_2_option" id="home_2_option"
+                                required></select></p>
+                <p><label for="away_2_option">Away Team 2: </label><select name="away_2_option" id="away_2_option"
+                                required></select></p>
+                <p><label for="home_3_option">Home Team 3: </label><select name="home_3_option" id="home_3_option"
+                                required></select></p>
+                <p><label for="away_3_option">Away Team 3: </label><select name="away_3_option" id="away_3_option"
+                                required></select></p>
+                <p><label for="home_4_option">Home Team 4: </label><select name="home_4_option" id="home_4_option"
+                                required></select></p>
+                <p><label for="away_4_option">Away Team 4: </label><select name="away_4_option" id="away_4_option"
+                                required></select></p>
+                <p><label for="home_5_option">Home Team 5: </label><select name="home_5_option" id="home_5_option"
+                                required></select></p>
+                <p><label for="away_5_option">Away Team 5: </label><select name="away_5_option" id="away_5_option"
+                                required></select></p>
+                <p><label for="home_6_option">Home Team 6: </label><select name="home_6_option" id="home_6_option"
+                                required></select></p>
+                <p><label for="away_6_option">Away Team 6: </label><select name="away_6_option" id="away_6_option"
+                                required></select></p>
+                <p><label for="home_1_score">Home Team 1 Score: </label><input type="number" name="home_1_score" id="home_1_score"
+                                min="0" max="100" required></p>
+                <p><label for="home_2_score">Home Team 2 Score: </label><input type="number" name="home_2_score" id="home_2_score"
+                                min="0" max="100" required></p>
+                <p><label for="home_3_score">Home Team 3 Score: </label><input type="number" name="home_3_score" id="home_3_score"
+                                min="0" max="100" required></p>
+                <p><label for="home_4_score">Home Team 4 Score: </label><input type="number" name="home_4_score" id="home_4_score"
+                                min="0" max="100" required></p>
+                <p><label for="home_5_score">Home Team 5 Score: </label><input type="number" name="home_5_score" id="home_5_score"
+                                min="0" max="100" required></p>
+                <p><label for="home_6_score">Home Team 6 Score: </label><input type="number" name="home_6_score" id="home_6_score"
+                                min="0" max="100" required></p>
+                <p><label for="away_1_score">Away Team 1 Score: </label><input type="number" name="away_1_score" id="away_1_score"
+                                min="0" max="100" required></p>
+                <p><label for="away_2_score">Away Team 2 Score: </label><input type="number" name="away_2_score" id="away_2_score"
+                                min="0" max="100" required></p>
+                <p><label for="away_3_score">Away Team 3 Score: </label><input type="number" name="away_3_score" id="away_3_score"
+                                min="0" max="100" required></p>
+                <p><label for="away_4_score">Away Team 4 Score: </label><input type="number" name="away_4_score" id="away_4_score"
+                                min="0" max="100" required></p>
+                <p><label for="away_5_score">Away Team 5 Score: </label><input type="number" name="away_5_score" id="away_5_score"
+                                min="0" max="100" required></p>
+                <p><label for="away_6_score">Away Team 6 Score: </label><input type="number" name="away_6_score" id="away_6_score"
+                                min="0" max="100" required></p>
+                <p><label for="first_scorer_minutes">First Scorer Minute: </label><input type="number" name="first_scorer_minutes"
+                                id="first_scorer_minutes"></p>
+                <p><input type="submit" id="insert_scorecard_results" value="Insert Scorecard Results"></p>
+
+        </form>
+</body>
+<script src="js/insertScorecardResults.js"></script>
+<script src="js/insertHockeyTeamName.js"></script>
+
+</html>
