@@ -1,8 +1,7 @@
+var form = document.getElementById('insert_scorecard_form');
 
-var button = document.getElementById('insert_scorecard');
-
-button.addEventListener('click', (ev) => {
-    //ev.preventDefault();
+form.addEventListener('submit', (ev) => {
+    ev.preventDefault();
 
     var settings = {
         "async": false,

@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require("path");
 var userControllers = require('../controllers/userController.js');
 var leaderboardControllers = require('../controllers/leaderboardController.js');
-var resultsControllers = require('../controllers/resultsController.js');
+var resultsControllers = require('../controllers/resultsController');
 
 var router = function (app) {
     app.route('/api/getAllScoreCardResults').get((req, res) => {
@@ -12,7 +12,7 @@ var router = function (app) {
     });
 
     app.route('/api/insertScoreCardResults').post((req, res) => {
-        resultsControllers.insertScoreCardResults(app, req, res);
+        resultsControllers.insertScorecardResults(app, req, res);
     });
 
     app.route('/api/insertScoreCard').post((req,res) => {

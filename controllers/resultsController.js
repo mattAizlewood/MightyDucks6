@@ -12,7 +12,7 @@ module.exports = {
             }
         });
     },
-    insertScoreCardResults: (app, req, res) => {
+    insertScorecardResults: (app, req, res) => {
         app.get('myDb').collection('results').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
                 console.log(err);
@@ -23,8 +23,6 @@ module.exports = {
                 } else {
                     maxID = docs[0].roundId + 1;
                 }
-
-
 
                 app.get('myDb').collection('results').insertOne({
                     'roundId': maxID,
@@ -39,6 +37,7 @@ module.exports = {
                         "firstScorerMinutes": req.body.firstScorerMinutes
                     }
                 });
+                res.json({"msg":"successful"});
             }
         })
     },
@@ -70,6 +69,7 @@ module.exports = {
                 });
             }
         });
+        res.json({"msg":"successful"});
     },
 
     getLatestScoreCard: (app, req, res) => {
