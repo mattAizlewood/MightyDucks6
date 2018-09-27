@@ -5,13 +5,6 @@ var path = require("path");
 var resultsController = require('../controllers/resultsController.js');
 var userControllers = require('../controllers/userController.js');
 var leaderboardControllers = require('../controllers/leaderboardController.js');
-<<<<<<< HEAD
-var resultsControllers = require('../controllers/resultsController');
-
-var router = function (app) {
-    app.route('/api/getAllScoreCardResults').get((req, res) => {
-        resultsControllers.getAllScoreCardResults(app, req, res);
-=======
 
 var router = function(app) {
     
@@ -33,7 +26,6 @@ var router = function(app) {
 
     app.route('/api/getAllScoreCardResults').get((req,res) => {
         resultsControllers.getAllScoreCardResults(app,req,res);
->>>>>>> Cheng
     });
 
     app.route('/api/insertScoreCardResults').post((req, res) => {
