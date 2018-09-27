@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leaderboards</title>
     <link rel="stylesheet" type="text/css" href="leaderboards.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -34,17 +35,35 @@
 
         </div>
         <br/>
-        <div class="large-centered-menu flex-container">
+                <div class="leaderboards-container large-centered-menu flex-container">
+                        <table id="Leaderboards">
+                            <tr>
+                                <th>
+                                    Position
+                                </th>
+                                <th>
+                                    User
+                                </th>
+                                <th>
+                                    Score
+                                </th>
+                            </tr>
+                        </table>
+                
+                    </div>
 
-        </div>
+        
     </div>
     <!-- small centred menu end -->
 
 
-    <div class="leaderboards-container">
-
-    </div>
 
 
+<script src="globalLeaderboards.js">
+
+
+
+//console.log(results);
+</script>
 </body>
 </html>

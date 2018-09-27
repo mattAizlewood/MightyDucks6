@@ -17,6 +17,18 @@ var router = function(app) {
     app.route('/api/getAllOpenLeaderboards').get((req,res) => {
         leaderboardControllers.getAllOpenLeaderboards(app,req,res);
     });
+
+    app.route('/api/getAllUsersGlobalLeaderboard').get((req,res) => {
+        leaderboardControllers.getAllPlayersGlobalLeaderboard(app,req,res);
+    });
+
+    app.route('/api/insertOpenLeague').post((req,res) => {
+        leaderboardControllers.insertOpenLeague(app,req,res);
+    });
+
+    app.route('/api/getUserPersona/:userID').get((req,res) => {
+        leaderboardControllers.getUserPersona(app,req,res);
+    });
     
 };
 
