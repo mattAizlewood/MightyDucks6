@@ -1,7 +1,42 @@
 var async = require('async');
 var mongo = require('mongodb');
-
 module.exports = {
+    getRoundResults: function (app, req, res) {
+        let roundId = req.body.roundId;
+        app.get('myDb').collection('results').findOne({ "roundId": roundId }, function (err, roundResults) {
+            if (err) {
+                console.error(err)
+            }
+            console.info(roundResults);
+            res.json(roundResults);
+
+        })
+    },
+
+    getUserPredictions: function (app, req, res) {
+        let roundId = req.body.roundId;
+        let userId = req.body.userId;
+        app.get('myDb').collection('predictions').findOne({ $and: [{ "roundId": roundId }, { "userId": userId }] }, function (err, predictions) {
+            if (err) {
+                console.error(err)
+            }
+            console.info(predictions);
+            res.json(predictions);
+
+        })
+    },
+
+    getAllRounds: function (app, req, res) {
+
+        app.get('myDb').collection('results').find({}).toArray(function (err, roundResults) {
+            if (err) {
+                console.error(err)
+            }
+            res.json(roundResults);
+        })
+    },
+
+
     getAllScoreCardResults: (app, req, res) => {
         app.get('myDb').collection('results').find().toArray((err, docs) => {
             if (err) {
@@ -12,7 +47,8 @@ module.exports = {
             }
         });
     },
-    insertScorecardResults: (app, req, res) => {
+
+    insertScoreCardResults: (app, req, res) => {
         app.get('myDb').collection('results').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
                 console.log(err);
@@ -23,6 +59,8 @@ module.exports = {
                 } else {
                     maxID = docs[0].roundId + 1;
                 }
+
+
 
                 app.get('myDb').collection('results').insertOne({
                     'roundId': maxID,
@@ -59,12 +97,12 @@ module.exports = {
                     'roundId': maxID,
                     'roundInfo': {
                         'date': req.body.date,
-                        "match1": { "matchID": 1, "homeTeam1": req.body.home1, "awayTeam1": req.body.away1 },
-                        "match2": { "matchID": 2, "homeTeam2": req.body.home2, "awayTeam2": req.body.away2 },
-                        "match3": { "matchID": 3, "homeTeam3": req.body.home3, "awayTeam3": req.body.away3 },
-                        "match4": { "matchID": 4, "homeTeam4": req.body.home4, "awayTeam4": req.body.away4 },
-                        "match5": { "matchID": 5, "homeTeam5": req.body.home5, "awayTeam5": req.body.away5 },
-                        "match6": { "matchID": 6, "homeTeam6": req.body.home6, "awayTeam6": req.body.away6 },
+                        "match1": { "matchID": 1, "homeTeam": req.body.home1, "awayTeam": req.body.away1 },
+                        "match2": { "matchID": 2, "homeTeam": req.body.home2, "awayTeam": req.body.away2 },
+                        "match3": { "matchID": 3, "homeTeam": req.body.home3, "awayTeam": req.body.away3 },
+                        "match4": { "matchID": 4, "homeTeam": req.body.home4, "awayTeam": req.body.away4 },
+                        "match5": { "matchID": 5, "homeTeam": req.body.home5, "awayTeam": req.body.away5 },
+                        "match6": { "matchID": 6, "homeTeam": req.body.home6, "awayTeam": req.body.away6 },
                     }
                 });
             }
@@ -82,4 +120,5 @@ module.exports = {
             }
         });
     }
+
 }

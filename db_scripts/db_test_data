@@ -1,3 +1,14 @@
+var myLeagues = [
+    {"leagueID": 1, "accessCode":"0","leagueName":"Global", "open":true, "password":""},
+    {"leagueID": 2, "accessCode":"AF2UB","leagueName":"TestClosedLeague", "open":false, "password":"password"}
+];
+
+db.League.insert(myLeagues);
+
+
+
+
+
 var users = [
      {"firstName" : "admin", "surname" : "user", "dob" : "2018-09-02", "persona" : "admin", "email" : "admin@test1.co.uk", "password" : "adminpass", "country" : "country", "status": "admin" },
     {"firstName" : "test", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test1", "email" : "test1@test1.co.uk", "password" : "1", "country" : "country" },
@@ -48,7 +59,7 @@ var resultsData = [
      "roundId": 1,
      "roundInfo": {
          "date": "01-10-2018",
-         "match1": { "matchID": 1, "homeTeam": { "name": "Arizona Coyotes", "score": 1 }, "awayTeam": { "name": "Calgary Flames", "score": 5 } },
+         "match1": { "matchID": 1, "homeTeam": { "name": "Arizona Coyotes", "score": 1 }, "awayTeam": { "name": "Calgary Flames", "score": 1 } },
          "match2": { "matchID": 2, "homeTeam": { "name": "Edmonton Oilers", "score": 4 }, "awayTeam": { "name": "Los Angeles Kings", "score": 3 } },
          "match3": { "matchID": 3, "homeTeam": { "name": "San Jose Sharks", "score": 5 }, "awayTeam": { "name": "Vancouver Canucks", "score": 2 } },
          "match4": { "matchID": 4, "homeTeam": { "name": "Vegas Golden Knights", "score": 0 }, "awayTeam": { "name": "Columbus Blue Jackets", "score": 7 } },
@@ -61,7 +72,7 @@ var resultsData = [
        "roundId": 2,
        roundInfo: {
        "date": "17-09-2018",
-       "match1": { "matchID": 1, "homeTeam": { "name": "Boston Bruins", "score": 1 }, "awayTeam": { "name": "Chicago Blackhawks", "score": 5 } },
+       "match1": { "matchID": 1, "homeTeam": { "name": "Boston Bruins", "score": 2 }, "awayTeam": { "name": "Chicago Blackhawks", "score": 2 } },
        "match2": { "matchID": 2, "homeTeam": { "name": "Carolina Hurricanes", "score": 4 }, "awayTeam": { "name": "Anaheim Ducks", "score": 3 } },
        "match3": { "matchID": 3, "homeTeam": { "name": "Vegas Golden Knights", "score": 5 }, "awayTeam": { "name": "Toronto Maple Leafs", "score": 2 } },
        "match4": { "matchID": 4, "homeTeam": { "name": "Winnipeg Jets", "score": 0 }, "awayTeam": { "name": "Washington Capitals", "score": 7 } },
@@ -70,43 +81,43 @@ var resultsData = [
        "firstScorerMinutes": 1   }}];
 db.results.insert(resultsData);
 
-var scorecardDatum = {
-                    'roundId':0,
-                    'roundInfo' : {
-                        'date' : '01-10-2018',
-                        "match1": {"matchID":1, "homeTeam":'home1', "awayTeam":'away1' },
-                        "match2": {"matchID":2, "homeTeam":'home2', "awayTeam":'away2' },
-                        "match3": {"matchID":3, "homeTeam":'home3', "awayTeam":'away3' },
-                        "match4": {"matchID":4, "homeTeam":'home4', "awayTeam":'away4' },
-                        "match5": {"matchID":5, "homeTeam":'home5', "awayTeam":'away5' },
-                        "match6": {"matchID":6, "homeTeam":'home6', "awayTeam":'away6' },
-                    }
-                };
-db.scorecard.insert(scorecardDatum)
 
-var predictionsData1 = [
-    {
-        'roundId': 0,
-        'predictionsInfo': {
-            "match1": { "homeTeam1Score": 5, "awayTeam1Score": 3 },
-            "match2": { "homeTeam2Score": 0, "awayTeam2Score": 1 },
-            "match3": { "homeTeam3Score": 4, "awayTeam3Score": 3 },
-            "match4": { "homeTeam4Score": 2, "awayTeam4Score": 4 },
-            "match5": { "homeTeam5Score": 2, "awayTeam5Score": 2 },
-            "match6": { "homeTeam6Score": 4, "awayTeam6Score": 6 },
-            "firstScorerMinutes": 24
-        }
+var predictionsData = [
+    { 
+        "userId": "5ba21b004a1f34766c8732b3",
+        "roundId" : 0, 
+        "roundPredictions": {
+            "match1" : { "home" : 3, "away" : 5 }, 
+            "match2" : { "home" : 6, "away" : 1 }, 
+            "match3" : { "home" : 1, "away" : 0 }, 
+            "match4" : { "home" : 0, "away" : 7 }, 
+            "match5" : { "home" : 4, "away" : 6 }, 
+            "match6" : { "home" : 4, "away" : 3 }, 
+            "firstScorerMinutes" : 34 }
     },
-    {
-        'roundId': 1,
-        'predictionsInfo': {
-            "match1": { "homeTeam1Score": 2, "awayTeam1Score": 0 },
-            "match2": { "homeTeam2Score": 3, "awayTeam2Score": 3 },
-            "match3": { "homeTeam3Score": 1, "awayTeam3Score": 4 },
-            "match4": { "homeTeam4Score": 3, "awayTeam4Score": 2 },
-            "match5": { "homeTeam5Score": 2, "awayTeam5Score": 5 },
-            "match6": { "homeTeam6Score": 1, "awayTeam6Score": 1 },
-            "firstScorerMinutes": 5
-        }
-    }
+    {   
+        "userId": "5ba21b004a1f34766c8732b3",
+        "roundId" : 1, 
+        "roundPredictions": {
+            "match1" : { "home" : 2, "away" : 2 }, 
+            "match2" : { "home" : 2, "away" : 4 }, 
+            "match3" : { "home" : 0, "away" : 5 }, 
+            "match4" : { "home" : 0, "away" : 8 }, 
+            "match5" : { "home" : 1, "away" : 3 }, 
+            "match6" : { "home" : 3, "away" : 1 }, 
+            "firstScorerMinutes" : 5}
+    },
+    {   
+        "userId": "5ba21b004a1f34766c8732b3",
+        "roundId" : 2, 
+        "roundPredictions": {
+            "match1" : { "home" : 1, "away" : 1 }, 
+            "match2" : { "home" : 2, "away" : 2 }, 
+            "match3" : { "home" : 3, "away" : 3 }, 
+            "match4" : { "home" : 4, "away" : 4 }, 
+            "match5" : { "home" : 5, "away" : 5 }, 
+            "match6" : { "home" : 6, "away" : 6 }, 
+            "firstScorerMinutes" : 12 
+        }}  
 ];
+db.predictions.insert(predictionsData);

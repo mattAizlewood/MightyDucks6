@@ -6,8 +6,16 @@ var userControllers = require('../controllers/userController.js');
 
 var router = function (app) {
     app.route('/login')
+<<<<<<< HEAD
         .post((req, res) => userControllers.login(app, req, res))
 
+=======
+    .post((req,res) => userControllers.login(app,req,res))
+
+    app.route('/api/getUser')
+    .post((req,res) => userControllers.getUser(app,req,res))
+    
+>>>>>>> Cheng
     app.route('/registration')
         .post((req, res) => userControllers.register(app, req, res))
 };
