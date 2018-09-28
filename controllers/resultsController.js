@@ -52,6 +52,7 @@ module.exports = {
         app.get('myDb').collection('results').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
                 console.log(err);
+                res.json({'msg':'unsuccessful'});
             } else {
 
                 if (docs[0].roundId === null || typeof docs[0].roundId == 'undefined') {
@@ -75,7 +76,7 @@ module.exports = {
                         "firstScorerMinutes": req.body.firstScorerMinutes
                     }
                 });
-                res.json({"msg":"successful"});
+                res.json({'msg':'successful'});
             }
         })
     },
@@ -83,6 +84,7 @@ module.exports = {
     insertScoreCard: (app, req, res) => {
         app.get('myDb').collection('scorecard').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
+                res.json({'msg':'unsuccessful'});
                 console.log(err);
             } else {
 
@@ -105,6 +107,8 @@ module.exports = {
                         "match6": { "matchID": 6, "homeTeam": req.body.home6, "awayTeam": req.body.away6 },
                     }
                 });
+                res.json({'msg':'successful'});
+
             }
         });
         res.json({"msg":"successful"});
@@ -113,6 +117,7 @@ module.exports = {
     getLatestScoreCard: (app, req, res) => {
         app.get('myDb').collection('scorecard').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
+                res.json({'msg':'unsuccesful'});
                 console.log(err);
             }
             else {
