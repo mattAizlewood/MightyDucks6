@@ -8,9 +8,10 @@ module.exports = {
     getAllLeaderboards: (app,req,res) => {
         app.get('myDb').collection('League').find({}).toArray((err,docs) => {
             if(err) {
+                res.json({'msg':'unsuccessful'});
                 console.error(err);
-            }
-            res.json(docs);
+            } else {
+            res.json(docs);}
         });
     },
 
@@ -35,6 +36,7 @@ module.exports = {
         app.get('myDb').collection('League').find().sort({"leagueID": -1}).limit(1).toArray((err,docs) => {
             if(err) {
                 console.error(err)
+                res.json({"msg":"unsuccessful"})
             }
             maxID = docs[0].leagueID + 1;
             if(maxID == null) {
@@ -42,8 +44,12 @@ module.exports = {
             }
 
             app.get('myDb').collection('League').insertOne({"leagueID":maxID, "accessCode":accessCode, "leagueName":leagueName, "open":open, "password":password}, (err, docs) => {
-                if(err) throw err;
+                if(err){ 
+                    res.json({'msg':'successful'});
+                    throw err;
+                } else {
                 console.log("successful insertion");
+                res.json({"msg":"successful"})}
             });
             
         })
