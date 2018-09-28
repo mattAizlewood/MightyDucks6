@@ -76,11 +76,7 @@ module.exports = {
                         "firstScorerMinutes": req.body.firstScorerMinutes
                     }
                 });
-<<<<<<< HEAD
-                res.json({"msg":"successful"});
-=======
                 res.json({'msg':'successful'});
->>>>>>> Matt
             }
         })
     },
@@ -111,14 +107,9 @@ module.exports = {
                         "match6": { "matchID": 6, "homeTeam": req.body.home6, "awayTeam": req.body.away6 },
                     }
                 });
-<<<<<<< HEAD
-=======
                 res.json({'msg':'successful'});
-
->>>>>>> Matt
             }
         });
-        res.json({"msg":"successful"});
     },
 
     getLatestScoreCard: (app, req, res) => {

@@ -13,7 +13,7 @@ var router = function(app) {
     });
     
     app.route('/api/getRoundResults').post((req,res) => {
-        resultsController.getRoundResults(app,req,res);
+        resultsController.getRoundsults(app,req,res);
     });
 
     app.route('/api/getUserPredictions').post((req,res) => {
@@ -33,7 +33,7 @@ var router = function(app) {
     });
 
     app.route('/api/insertScoreCard').post((req,res) => {
-        resultsControllers.insertScoreCard(app,req,res);
+        resultsControllers.i(app,req,res);
     });
 
     app.route('/api/getLatestScoreCard').get((req,res) => {
