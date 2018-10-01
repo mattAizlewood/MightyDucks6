@@ -7,15 +7,15 @@ db.League.insert(myLeagues);
 
 var users = [
      {"firstName" : "admin", "surname" : "user", "dob" : "2018-09-02", "persona" : "admin", "email" : "admin@test1.co.uk", "password" : "adminpass", "country" : "country", "status": "admin" },
-    {"firstName" : "test", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test1", "email" : "test1@test1.co.uk", "password" : "1", "country" : "country" },
-    {"firstName" : "test1", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test2", "email" : "test2@test2.co.uk", "password" : "cheese", "country" : "country" },
-    {"firstName" : "test2", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test3", "email" : "test3@test3.co.uk", "password" : "1", "country" : "country" },
-    {"firstName" : "test3", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test4", "email" : "test4@test4.co.uk", "password" : "cheese", "country" : "country" },
-    {"firstName" : "test4", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test5", "email" : "test5@test5.co.uk", "password" : "1", "country" : "country" },
-    {"firstName" : "test5", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test6", "email" : "test6@test6.co.uk", "password" : "cheese", "country" : "country" },
-    {"firstName" : "test6", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test7", "email" : "test7@test7.co.uk", "password" : "1", "country" : "country" },
-    {"firstName" : "test7", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test8", "email" : "test8@test8.co.uk", "password" : "cheese", "country" : "country" },
-    {"firstName" : "test8", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test9", "email" : "test9@test9.co.uk", "password" : "1", "country" : "country" }
+    {"firstName" : "test", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test1", "email" : "test1@test1.co.uk", "password" : "1", "country" : "country","status": "user"},
+    {"firstName" : "test1", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test2", "email" : "test2@test2.co.uk", "password" : "cheese", "country" : "country","status": "user" },
+    {"firstName" : "test2", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test3", "email" : "test3@test3.co.uk", "password" : "1", "country" : "country","status": "user" },
+    {"firstName" : "test3", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test4", "email" : "test4@test4.co.uk", "password" : "cheese", "country" : "country","status": "user" },
+    {"firstName" : "test4", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test5", "email" : "test5@test5.co.uk", "password" : "1", "country" : "country","status": "user" },
+    {"firstName" : "test5", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test6", "email" : "test6@test6.co.uk", "password" : "cheese", "country" : "country","status": "user" },
+    {"firstName" : "test6", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test7", "email" : "test7@test7.co.uk", "password" : "1", "country" : "country","status": "user" },
+    {"firstName" : "test7", "surname" : "testSurname1", "dob" : "2018-09-02", "persona" : "test8", "email" : "test8@test8.co.uk", "password" : "cheese", "country" : "country","status": "user" },
+    {"firstName" : "test8", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test9", "email" : "test9@test9.co.uk", "password" : "1", "country" : "country","status": "user" }
 ];
 
 db.userCollection.insert(users);
