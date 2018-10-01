@@ -108,10 +108,6 @@ module.exports = {
                     }
                 });
                 res.json({'msg':'successful'});
-<<<<<<< HEAD
-
-=======
->>>>>>> Jamel
             }
         });
     },
