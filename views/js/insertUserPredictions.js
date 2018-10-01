@@ -1,6 +1,5 @@
 var userPredictionsForm = document.getElementById('predictionsForm');
 
-
 userPredictionsForm.addEventListener('submit', (ev) => {
     ev.preventDefault();
 
