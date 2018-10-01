@@ -2,7 +2,7 @@ var form = document.getElementById('scorecard_results_form');
 
 form.addEventListener('submit', (ev) => {
     ev.preventDefault();
-console.info("test");
+
     var settings = {
         "async": false,
         "crossDomain": true,
@@ -40,7 +40,7 @@ console.info("test");
             "away6": document.getElementById('away_6_option').value,
             "away6Score": document.getElementById('away_6_score').value,
             "firstScorerMinutes": document.getElementById('first_scorer_minutes').value
-        } 
+        }
     }
 
     $.ajax(settings).done();

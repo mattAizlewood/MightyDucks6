@@ -5,10 +5,6 @@ var myLeagues = [
 
 db.League.insert(myLeagues);
 
-
-
-
-
 var users = [
      {"firstName" : "admin", "surname" : "user", "dob" : "2018-09-02", "persona" : "admin", "email" : "admin@test1.co.uk", "password" : "adminpass", "country" : "country", "status": "admin" },
     {"firstName" : "test", "surname" : "testSurname", "dob" : "2018-09-02", "persona" : "test1", "email" : "test1@test1.co.uk", "password" : "1", "country" : "country","status": "user"},
@@ -40,6 +36,35 @@ var myUsersInGlobalLeague = [
 ];
 
 db.Leaderboards.insert(myUsersInGlobalLeague);
+
+var scorecardData = [
+    {
+        "roundId" : 0, 
+        "roundInfo" : { 
+            "date" : "2018-09-22", 
+            "match1" : { "matchID" : 1, "homeTeam" : "New York Islanders", "awayTeam" : "New York Rangers" }, 
+            "match2" : { "matchID" : 2, "homeTeam" : "Pittsburgh Penguins", "awayTeam" : "Washington Capitals" }, 
+            "match3" : { "matchID" : 3, "homeTeam" : "Chicago Blackhawks, "awayTeam" : "Colorado Avalanche" }, 
+            "match4" : { "matchID" : 4, "homeTeam" : "Dallas Stars", "awayTeam" : "Minnesota Wild" }, 
+            "match5" : { "matchID" : 5, "homeTeam" : "Nashville Predators", "awayTeam" : "St. Louis Blues"" }, 
+            "match6" : { "matchID" : 6, "homeTeam" : "Winnipeg Jets", "awayTeam" : "Anaheim Ducks" } 
+        } 
+    },
+    {
+        "roundId" : 1, 
+        "roundInfo" : { 
+            "date" : "2018-09-29", 
+            "match1" : { "matchID" : 1, "homeTeam" : "Washington Capitals", "awayTeam" : "St. Louis Blues" }, 
+            "match2" : { "matchID" : 2, "homeTeam" : "Calgary Flames", "awayTeam" : "Ottawa Senators" }, 
+            "match3" : { "matchID" : 3, "homeTeam" : "Philadelphia Flyers", "awayTeam" : "Toronto Maple Leafs" }, 
+            "match4" : { "matchID" : 4, "homeTeam" : "St. Louis Blues", "awayTeam" : "Montreal Canadiens" }, 
+            "match5" : { "matchID" : 5, "homeTeam" : "Colorado Avalanche", "awayTeam" : "Minnesota Wild" }, 
+            "match6" : { "matchID" : 6, "homeTeam" : "Dallas Stars", "awayTeam" : "Ottawa Senators" } 
+        } 
+    }
+];
+
+db.scorecard.insert(scorecardData);
 
 var resultsData = [
   {

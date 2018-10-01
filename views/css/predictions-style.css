@@ -62,8 +62,6 @@ nav ul li:hover {
 .flex-container {
     display: flex;
     justify-content: center;
-    position: relative;
-    top: 25px;
 }
 
 .small-centered-menu button {
@@ -108,21 +106,8 @@ nav ul li:hover {
     margin: 15px;
 }
 
-#banner {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 25px;
-}
-
-#homepage_howtoplay_content {
-    position: relative;
-    top: 25px;
-}
-
-#current_week {
-    position: relative;
-    top: 25px;
+#predictionsForm {
+    padding-top: 50px;
 }
 
 #team_1 {
@@ -131,9 +116,12 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#versus_1 {
-    position: relative;
-    bottom: 10px;
+#home_team_1_score {
+    height: 50px;
+}
+
+#away_team_1_score {
+    height: 50px;
 }
 
 #team_2 {
@@ -148,9 +136,12 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#versus_2 {
-    position: relative;
-    bottom: 10px;
+#home_team_2_score {
+    height: 50px;
+}
+
+#away_team_2_score {
+    height: 50px;
 }
 
 #team_4 {
@@ -165,9 +156,12 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#versus_3 {
-    position: relative;
-    bottom: 10px;
+#home_team_3_score {
+    height: 50px;
+}
+
+#away_team_3_score {
+    height: 50px;
 }
 
 #team_6 {
@@ -182,9 +176,12 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#versus_4 {
-    position: relative;
-    bottom: 10px;
+#home_team_4_score {
+    height: 50px;
+}
+
+#away_team_4_score {
+    height: 50px;
 }
 
 #team_8 {
@@ -199,9 +196,12 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#versus_5 {
-    position: relative;
-    bottom: 10px;
+#home_team_5_score {
+    height: 50px;
+}
+
+#away_team_5_score {
+    height: 50px;
 }
 
 #team_10 {
@@ -216,9 +216,12 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#versus_6 {
-    position: relative;
-    bottom: 10px;
+#home_team_6_score {
+    height: 50px;
+}
+
+#away_team_6_score {
+    height: 50px;
 }
 
 #team_12 {
@@ -227,8 +230,9 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#footer {
-    position: relative;
-    top: 25px;
+#submit_button {
+    /* -webkit-appearance: none; */
+    display: block;
+    text-align: center;
+    height: 50px;
 }
-

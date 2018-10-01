@@ -8,6 +8,7 @@ module.exports = {
                 res.json(docs);
             }
         });
+        res.json({'msg':'successful'});
     },
     insertUserPredictions: (app, req, res) => {
         app.get('myDb').collection('predictions').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
@@ -33,6 +34,7 @@ module.exports = {
                         "firstScorerMinutes": req.body.firstScorerMinutes
                     }
                 });
+                res.json({'msg':'successful'});
             }
         });
     },
@@ -45,5 +47,6 @@ module.exports = {
                 res.json(docs);
             }
         });
+        res.json({'msg':'successful'});
     }
 };

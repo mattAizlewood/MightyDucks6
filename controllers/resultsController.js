@@ -108,10 +108,12 @@ module.exports = {
                     }
                 });
                 res.json({'msg':'successful'});
+<<<<<<< HEAD
 
+=======
+>>>>>>> Jamel
             }
         });
-        res.json({"msg":"successful"});
     },
 
     getLatestScoreCard: (app, req, res) => {
