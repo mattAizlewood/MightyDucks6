@@ -129,6 +129,8 @@ nav ul li:hover {
     margin-left: 35%;
 }
 
+/* Admin CSS */
+
 #adminOptions {
     display: none;
 }
@@ -145,4 +147,23 @@ nav ul li:hover {
 
 #country{
     width: 135px;
+}
+
+/* Index CSS */
+
+#banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+#homepage_howtoplay_content {
+    position: relative;
+    top: 25px;
+}
+
+#current_week {
+    position: relative;
+    top: 25px;
 }
