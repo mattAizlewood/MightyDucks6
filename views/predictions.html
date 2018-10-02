@@ -7,28 +7,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Predictions</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/predictions-style.css">
+    <link rel="stylesheet" href="/css/predictions-style.css">
+    
 </head>
 
 <body>
-    <!-- Predictions Page Title -->
-    <h1 id="predictions_header1">Predictions</h1>
-
     <!-- Navigation Bar -->
-    <nav id="nav_bar">
-        <ul id="nav_bar">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="login.html">Log In</a></li>
-            <li><a href="registration.html">Register</a></li>
-            <li><a href="results.html">Result</a></li>
-            <li><a href="leaderboards.html">Leaderboards</a></li>
-            <li><a href="scorecard.html">Scorecard</a></li>
-            <li><a href="predictions.html">Predictions</a></li>
-            <li><a href="leagues.html">Leagues</a></li>
-            <li><a href="settings.html">Settings</a></li>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="predictions.html">Play</a>
+            </li>
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+            <li>
+                <a href="leaderboards.html">Leaderboards</a>
+            </li>
+            <li>
+                <a href="settings.html">Settings</a>
+            </li>
+            <li class="flex-hang-right">
+                <a href="login.html">Login</a>
+            </li>
+            <li>
+                <a href="registration.html">Register</a>
+            </li>
         </ul>
     </nav>
 
+    <!-- Predictions Page Title -->
+    <h1 id="predictions_header1">Predictions</h1>
     <!-- Predictions Form Details -->
     <form id="predictionsForm">
         <div class="flex-container">
@@ -89,16 +101,38 @@
                 </div>
             </div>
         </div>
-        <div id="golden_goal">
-            <p><b>The mintue of the first goal in any of the 6 matches.</b></p>
-            <p><label for="first_scorer_minutes">Golden Goal: </label><input type="number" name="first_scorer_minutes"
-                    id="first_scorer_minutes"></p>
+        
+        <div class= "flex-container">
+                <p>
+                    <label><b>The mintue of the first goal in any of the 6 matches.</b></label>
+                    <br>
+                    <label for="first_scorer_minutes">Golden Goal: </label>
+                    <input type="number" name="first_scorer_minutes" id="first_scorer_minutes">
+                </p>
         </div>
+
         <div id="submit_button">
             <p><button type="submit" id="submit_predictions">Submit Predictions</button></p>
         </div>
     </form>
 
+    <div>
+        <form action="" id="frmLogin">
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+            
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" required>        
+                </div>
+                <div>
+                    <input type="submit" value="Login" id = "login">
+                </div>
+            
+        </form>
+    </div>
     <footer id="footer">
         <h5>&copy Mighty Ducks 6</h5>
     </footer>
