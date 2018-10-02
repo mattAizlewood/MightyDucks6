@@ -95,9 +95,10 @@ nav ul li:hover {
 .small-centered-menu {
     margin-top: 20px;
     background-color: #FFFFFF;
-    width: 50%;
+    width: 90%;
     border-radius: 4px;
     height: 50px;
+    justify-content: center;
 
 }
 
@@ -107,7 +108,8 @@ nav ul li:hover {
 }
 
 .small-centered-menu button {
-    margin: auto;
+    margin-left: 20px;
+    margin-top: 5px;
     width: 100px;
     height: 40px;
 }
@@ -145,4 +147,20 @@ nav ul li:hover {
 
 #country{
     width: 135px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
