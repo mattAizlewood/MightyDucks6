@@ -282,7 +282,9 @@ module.exports = {
                     'score' : prediction.score
                 });
             })
+            res.json({'msg':'successful'});
         })
+        
 
         
         
