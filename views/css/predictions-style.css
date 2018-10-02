@@ -62,6 +62,8 @@ nav ul li:hover {
 .flex-container {
     display: flex;
     justify-content: center;
+    position: relative;
+    top: 25px;
 }
 
 .small-centered-menu button {
@@ -106,8 +108,21 @@ nav ul li:hover {
     margin: 15px;
 }
 
-#predictionsForm {
-    padding-top: 50px;
+#banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+#homepage_howtoplay_content {
+    position: relative;
+    top: 25px;
+}
+
+#current_week {
+    position: relative;
+    top: 25px;
 }
 
 #team_1 {
@@ -230,9 +245,28 @@ nav ul li:hover {
     bottom: 10px;
 }
 
-#submit_button {
-    /* -webkit-appearance: none; */
-    display: block;
-    text-align: center;
-    height: 50px;
+#golden_goal {
+    position: relative;
+    top: 25px;
 }
+
+#submit_button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+#submit_predictions {
+    height: 50px;
+    width: 100px;
+}
+
+#footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+

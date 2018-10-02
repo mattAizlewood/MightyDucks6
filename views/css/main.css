@@ -131,6 +131,8 @@ nav ul li:hover {
     margin-left: 35%;
 }
 
+/* Admin CSS */
+
 #adminOptions {
     display: none;
 }
@@ -163,4 +165,22 @@ td, th {
 
 tr:nth-child(even) {
     background-color: #dddddd;
+}
+/* Index CSS */
+
+#banner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 25px;
+}
+
+#homepage_howtoplay_content {
+    position: relative;
+    top: 25px;
+}
+
+#current_week {
+    position: relative;
+    top: 25px;
 }
