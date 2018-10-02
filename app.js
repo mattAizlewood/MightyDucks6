@@ -7,6 +7,7 @@ var predictionRoutes = require('./routes/predictionRoutes');
 var leaderboardsRoutes = require('./routes/leaderboardsRoutes');
 var resultsRoutes = require('./routes/resultsRoutes');
 var calculateLogicRoutes = require('./routes/calculateLogicRoutes');
+var adminRoutes = require('./routes/adminRoutes');
 //Import the mongoose module
 var MongoClient = require('mongodb').MongoClient;
 // var session = require('client-sessions');
@@ -33,5 +34,6 @@ leaderboardsRoutes(app);
 predictionRoutes(app);
 resultsRoutes(app);
 calculateLogicRoutes(app);
+adminRoutes(app);
 
 app.listen(3000);
