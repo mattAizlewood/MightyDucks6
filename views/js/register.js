@@ -21,7 +21,8 @@
                 "persona" : persona,
                 "email" : email,
                 "password" : password,
-                "country" : country
+                "country" : country,
+                "status" : "user"
             };
     
             let endPoint = "/registration";
@@ -33,10 +34,10 @@
                 }
             })
             .then(function(response){
-                return response.json();
+                return response;
             })
             .then(function(myData){
-                console.dir(myData);
+                window.location.href = myData.url;
             })
         }
         else{
