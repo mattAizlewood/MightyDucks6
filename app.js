@@ -5,6 +5,7 @@ var app = express();
 var routes = require('./routes/routes');
 var leaderboardsRoutes = require('./routes/leaderboardsRoutes');
 var resultsRoutes = require('./routes/resultsRoutes');
+var calculateLogicRoutes = require('./routes/calculateLogicRoutes');
 //Import the mongoose module
 var MongoClient = require('mongodb').MongoClient;
 var session = require('client-sessions');
@@ -37,6 +38,7 @@ app.set('view engine', 'vue');
 routes(app);
 leaderboardsRoutes(app);
 resultsRoutes(app);
+calculateLogicRoutes(app);
 
 
 app.listen(3000);

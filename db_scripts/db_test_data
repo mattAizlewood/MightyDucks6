@@ -95,3 +95,4 @@ var scorecardDatum = {
                     }
                 };
 db.scorecard.insert(scorecardDatum)
+
