@@ -6,7 +6,7 @@ module.exports = {
                 console.error(err)
             }
             else if(user != null && user.password === req.body.password && user.status == "user"){
-                res.redirect('/leaderboards.html');
+                res.redirect('/index.html');
             }
             else if (user != null && user.password === req.body.password && user.status == "admin") {
                 console.info('Admin login successful');
@@ -14,6 +14,7 @@ module.exports = {
             }
             else{
                 console.info(user);
+                console.info(req.body);
                 console.info("invalid password or email");
             }
             
@@ -31,7 +32,9 @@ module.exports = {
             if (err) {
                 console.error(err)
             }
-            res.json({"msg":"successful"})
+            else{
+                res.redirect('/index.html');
+            }
         })
         //res.send(`Add a staff: ${req.body}`);
     },
