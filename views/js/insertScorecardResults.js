@@ -42,7 +42,23 @@ form.addEventListener('submit', (ev) => {
             "firstScorerMinutes": document.getElementById('first_scorer_minutes').value
         }
     }
-
     $.ajax(settings).done();
+
+    var settingsForCalculating = {
+        "async": true,
+        "crossDomain": true,
+        "url": "http://localhost:3000/api/calculateScoreForLeaderboard",
+        "method": "GET",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Cache-Control": "no-cache",
+          "Postman-Token": "bd5f395e-e0bd-4d92-8622-f617ba618316"
+        }
+      }
+      
+      $.ajax(settingsForCalculating).done();
+
+
+
 });
 

@@ -5,6 +5,7 @@ var path = require("path");
 var resultsController = require('../controllers/resultsController.js');
 var userControllers = require('../controllers/userController.js');
 var leaderboardControllers = require('../controllers/leaderboardController.js');
+var calculateScoreControllers = require('../controllers/calculateScoresController');
 
 var router = function(app) {
     
@@ -30,6 +31,8 @@ var router = function(app) {
 
     app.route('/api/insertScoreCardResults').post((req, res) => {
         resultsController.insertScoreCardResults(app, req, res);
+
+        
     });
 
     app.route('/api/insertScoreCard').post((req,res) => {
