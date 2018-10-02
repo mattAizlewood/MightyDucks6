@@ -78,7 +78,6 @@ module.exports = {
                 throw err
             }
             else {
-                
                 res.json({'persona':docs.persona});
             }
         });
