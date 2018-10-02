@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Play Mighty Ducks</title>
+    <link rel="stylesheet" href="css/index-style.css">
+</head>
+
+<body>
+    <div class="header_container">
+        <header id="header">
+            <!--id="homepage_heading1" Home Page Title -->
+            <h1 id="heading1">Mighty Ducks</h1>
+
+            <!-- Navigation Bar -->
+            <nav>
+                <ul id="nav_bar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="registration.html">Register</a></li>
+                    <li><a href="results.html">Result</a></li>
+                    <li><a href="leaderboards.html">Leaderboards</a></li>
+                    <li><a href="scorecard.html">Scorecard</a></li>
+                    <li><a href="predictions.html">Predictions</a></li>
+                    <li><a href="leagues.html">Leagues</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="banner">
+            <img id="index_banner" src="img/Index Banner.jpg" alt="Team 1" width="1024" height="387">
+        </div>
+    </div>
+
+    <!-- How to play information -->
+    <div id="homepage_howtoplay_content">
+        <h2 id="homepage_header2">How to Play</h2>
+        <p align="justify"> 1. Create an account or login using your existing account details.</p>
+        <p align="justify"> 2. Enter your predictions for the different aspects of the six games (e.g. Score Result,
+            Match Winner First player to score each week, etc).</p>
+        <p align="justify"> 3. Sit back, relax and keep an eye out for the results at the end of the week! Correct
+            predictions will earn you points and help you rise up the leaderboards.</p>
+    </div>
+
+    <!-- Current Scorecard -->
+    <h2 id="current_week"></h2>
+
+    <!-- Current Scorecard -->
+    <div class="flex-container">
+        <div class="grid-item">
+            <h3 id="game_header">Game #1</h3>
+            <div class="matchInfo">
+                <img id="team_1" src="" alt="Team 1" width="80" height="80">
+                <img id="versus_1" src="" alt="Versus" width="80" height="80">
+                <img id="team_2" src="" alt="Team 2" width="80" height="80">
+            </div>
+        </div>
+        <div class="grid-item">
+            <h3 id="game_header">Game #2</h3>
+            <div class="matchInfo">
+                <img id="team_3" src="" alt="Team 3" width="80" height="80">
+                <img id="versus_2" src="" alt="Versus" width="80" height="80">
+                <img id="team_4" src="" alt="Team 4" width="80" height="80">
+            </div>
+        </div>
+        <div class="grid-item">
+            <h3 id="game_header">Game #3</h3>
+            <div class="matchInfo">
+                <img id="team_5" src="" alt="Team 5" width="80" height="80">
+                <img id="versus_3" src="" alt="Versus" width="80" height="80">
+                <img id="team_6" src="" alt="Team 6" width="80" height="80">
+            </div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="grid-item">
+            <h3 id="game_header">Game #4</h3>
+            <div class="matchInfo">
+                <img id="team_7" src="" alt="Team 7" width="80" height="80">
+                <img id="versus_4" src="" alt="Versus" width="80" height="80">
+                <img id="team_8" src="" alt="Team 8" width="80" height="80">
+            </div>
+        </div>
+        <div class="grid-item">
+            <h3 id="game_header">Game #5</h3>
+            <div class="matchInfo">
+                <img id="team_9" src="" alt="Team 9" width="80" height="80">
+                <img id="versus_5" src="" alt="Versus" width="80" height="80">
+                <img id="team_10" src="" alt="Team 10" width="80" height="80">
+            </div>
+        </div>
+        <div class="grid-item">
+            <h3 id="game_header">Game #6</h3>
+            <div class="matchInfo">
+                <img id="team_11" src="" alt="Team 11" width="80" height="80">
+                <img id="versus_6" src="" alt="Versus" width="80" height="80">
+                <img id="team_12" src="" alt="Team 12" width="80" height="80">
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <h5>&copy Mighty Ducks 6</h5>
+    </footer>
+</body>
+<script src="js/populateScorecard.js"></script>
+
+</html>

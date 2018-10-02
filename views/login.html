@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Login</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
     <div class="container">
         <h1>Login</h1>
 
-        <form action="" id="frmLogin">
+        <form id="frmLogin">
                 <div>
                     <label for="email">Email: </label>
                     <input type="email" name="email" id="email" required>
@@ -22,17 +22,14 @@
                     <label for="password">Password: </label>
                     <input type="password" name="password" id="password" required>        
                 </div>
-                <div class="buttons">
-                    <input type="submit" value="Login" id = "login">
+                <div>
+                    <input type="submit" value="Login"  class = "loginButtons">
                 </div>
-           
         </form>
-
-        
-        
-        <div class="buttons">
-            <button  onclick="location.href='registration.html';"> Register a new account</button>
+        <div class="flex-container">
+            <button class = "loginButtons" onclick="location.href='registration.html';"> Register a new account</button>
         </div>
+        
     </div>
 
 </body>

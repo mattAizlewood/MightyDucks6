@@ -1,3 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 500px; 
+    width: 100%;
+	/* 1366x768	16:9*/
+    margin: auto;
+    margin-top: 100px;
+}
+
+form>div{
+    display: flex;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+    justify-content: center;
+}
+
+label{
+    flex-basis: 150px;
+}
+
+select{
+    height: 25px;
+}
+
+h1{
+    text-align: center;
+}
+
+.loginButtons{
+    -webkit-appearance: none;
+    width: 180px;
+    height: 30px;
+    text-align: center; 
+}
+.buttons{
+    -webkit-appearance: none;
+
+    width: 200px;
+    height: 50px;
+}
 body {
     background-color: #D6C9CC;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -73,8 +118,31 @@ nav ul li:hover {
     background-color: #FFFFFF;
     width: 90%;
     border-radius: 4px;
+    height: 50px;
 
 }
 .flex-column {
     flex-direction: column;
+}
+
+.selectPosition{
+    margin-left: 35%;
+}
+
+#adminOptions {
+    display: none;
+}
+.adminOptions {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#errorMessage{
+    display: none;
+    color:  red;
+}
+
+#country{
+    width: 135px;
 }

@@ -25,19 +25,19 @@ var router = function(app) {
     });
 
     app.route('/api/getAllScoreCardResults').get((req,res) => {
-        resultsControllers.getAllScoreCardResults(app,req,res);
+        resultsController.getAllScoreCardResults(app,req,res);
     });
 
-    app.route('/api/insertScoreCardResults').post((req,res) => {
-        resultsControllers.insertScoreCardResults(app,req,res);
+    app.route('/api/insertScoreCardResults').post((req, res) => {
+        resultsController.insertScoreCardResults(app, req, res);
     });
 
     app.route('/api/insertScoreCard').post((req,res) => {
-        resultsControllers.insertScoreCard(app,req,res);
+        resultsController.insertScoreCard(app,req,res);
     });
 
     app.route('/api/getLatestScoreCard').get((req,res) => {
-        resultsControllers.getLatestScoreCard(app,req,res);
+        resultsController.getLatestScoreCard(app,req,res);
     });
     
 };

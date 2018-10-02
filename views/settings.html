@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="predictions.html">Play</a>
+            </li>
+            <li>
+                <a href="results.html">Results</a>
+            </li>
+            <li>
+                <a href="scorecard.html">Scorecard</a>
+            </li>
+            <li>
+                <a href="leaderboards.html">Leaderboards</a>
+            </li>
+            <li>
+                <a href="settings.html">Settings</a>
+            </li>
+            <li class="flex-hang-right">
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form action="" id="frmLogin">
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="flex-container">
+                <input type="submit" value="Login" id="login" class = "loginButtons" >
+            </div>
+
+        </form>
+    </div>
+
+    <div id="adminOptions" class="container">
+        <div class= "adminOptions">
+            <input type="submit" id="insertScorecard" value="Insert Scorecard" class= "buttons" onclick="window.location='/insertScorecard.html'">
+        </div>
+        
+        <div class= "adminOptions">
+            <input type="submit" id="insertScorecardResults" value="Insert Scorecard Results" class= "buttons" onclick="window.location='/insertScorecardResults.html'">
+        </div>
+        
+    </div>
+
+    <div id="errorMessage">
+        <p>User has no permission</p>
+    </div>
+    <div>
+        <input type="submit" id="back" value="Back" onclick="window.location='/index.html'">
+    </div>
+</body>
+<script src="js/settings.js"></script>
+
+</html>

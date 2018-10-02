@@ -108,7 +108,6 @@ module.exports = {
                     }
                 });
                 res.json({'msg':'successful'});
-
             }
         });
     },
