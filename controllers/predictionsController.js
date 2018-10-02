@@ -16,7 +16,7 @@ module.exports = {
                 console.log(err);
             } else {
 
-                if (docs[0].roundId === null || typeof docs[0].roundId == 'undefined') {
+                if (docs.length < 1) {
                     maxID = 0;
                 } else {
                     maxID = docs[0].roundId + 1;
