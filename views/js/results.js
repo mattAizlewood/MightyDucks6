@@ -134,20 +134,21 @@ function setUserPredictions(roundId, userId){
         return response.json();
     })
     .then(function(myData){
+        console.log(myData);
         
         if(myData != null){
-            document.getElementById("home_team_1_pScore").value = myData.roundPredictions.match1.home;
-            document.getElementById("away_team_1_pScore").value = myData.roundPredictions.match1.away;
-            document.getElementById("home_team_2_pScore").value = myData.roundPredictions.match2.home;
-            document.getElementById("away_team_2_pScore").value = myData.roundPredictions.match2.away;
-            document.getElementById("home_team_3_pScore").value = myData.roundPredictions.match3.home;
-            document.getElementById("away_team_3_pScore").value = myData.roundPredictions.match3.away;
-            document.getElementById("home_team_4_pScore").value = myData.roundPredictions.match4.home;
-            document.getElementById("away_team_4_pScore").value = myData.roundPredictions.match4.away;
-            document.getElementById("home_team_5_pScore").value = myData.roundPredictions.match5.home;
-            document.getElementById("away_team_5_pScore").value = myData.roundPredictions.match5.away;
-            document.getElementById("home_team_6_pScore").value = myData.roundPredictions.match6.home;
-            document.getElementById("away_team_6_pScore").value = myData.roundPredictions.match6.away;
+            document.getElementById("home_team_1_pScore").value = myData.roundPredictions.match1.homeTeam1Score;
+            document.getElementById("away_team_1_pScore").value = myData.roundPredictions.match1.awayTeam1Score;
+            document.getElementById("home_team_2_pScore").value = myData.roundPredictions.match2.homeTeam2Score;
+            document.getElementById("away_team_2_pScore").value = myData.roundPredictions.match2.awayTeam2Score;
+            document.getElementById("home_team_3_pScore").value = myData.roundPredictions.match3.homeTeam3Score;
+            document.getElementById("away_team_3_pScore").value = myData.roundPredictions.match3.awayTeam3Score;
+            document.getElementById("home_team_4_pScore").value = myData.roundPredictions.match4.homeTeam4Score;
+            document.getElementById("away_team_4_pScore").value = myData.roundPredictions.match4.awayTeam4Score;
+            document.getElementById("home_team_5_pScore").value = myData.roundPredictions.match5.homeTeam5Score;
+            document.getElementById("away_team_5_pScore").value = myData.roundPredictions.match5.awayTeam5Score;
+            document.getElementById("home_team_6_pScore").value = myData.roundPredictions.match6.homeTeam6Score;
+            document.getElementById("away_team_6_pScore").value = myData.roundPredictions.match6.awayTeam6Score;
         }
         else{
             document.getElementById("home_team_1_pScore").value = 0;
