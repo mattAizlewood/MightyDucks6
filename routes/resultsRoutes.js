@@ -13,7 +13,7 @@ var router = function(app) {
     });
     
     app.route('/api/getRoundResults').post((req,res) => {
-        resultsController.getRoundsults(app,req,res);
+        resultsController.getRoundResults(app,req,res);
     });
 
     app.route('/api/getUserPredictions').post((req,res) => {
