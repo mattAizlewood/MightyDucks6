@@ -37,11 +37,14 @@ module.exports = {
             if(err) {
                 console.error(err)
                 res.json({"msg":"unsuccessful"})
+            } 
+            maxID = 2;
+            if(docs.length < 1) {
+                maxID = 2;
+            } else {
+                maxID = docs[0].leagueID + 1;
             }
-            maxID = docs[0].leagueID + 1;
-            if(maxID == null) {
-                maxID = 1;
-            }
+            
 
             app.get('myDb').collection('League').insertOne({"leagueID":maxID, "accessCode":accessCode, "leagueName":leagueName, "open":open, "password":password}, (err, docs) => {
                 if(err){ 
