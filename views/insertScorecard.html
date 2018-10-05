@@ -6,37 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Insert Scorecard</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="predictions">Play</a>
-            </li>
-            <li>
-                <a href="results">Results</a>
-            </li>
-            <li>
-                <a href="leaderboards">Leaderboards</a>
-            </li>
-            <li>
-                <a href="settings">Settings</a>
-            </li>
-            <li class="flex-hang-right" id= "logout">
-                <a href="#" id="logout">Logout</a>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <div class="container">
+            <div class="menu">
+                <div class="menu_icon">
+                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png" alt="Menu Bar">
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav>
+                <ul id="nav_bar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="registration.html">Register</a></li>
+                    <li><a href="results.html">Result</a></li>
+                    <li><a href="leaderboards.html">Leaderboards</a></li>
+                    <li><a href="predictions.html">Predictions</a></li>
+                    <li><a href="leagues.html">Leagues</a></li>
+                    <li><a href="/settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Scorecard Page Title -->
-    <h1 id="scorecard_header_1">Insert Scorecard</h1>
-    <form id="insert_scorecard_form">
+    <div class="container">
+        <h1 id="scorecard_header_1">Insert Scorecard</h1>
+        <form id="insert_scorecard_form">
             <div>
                 <label for="date">Date: </label><input type="date" name="date" id="date" required>
             </div>
@@ -52,7 +54,7 @@
                 <div><label for="away_2_option">Away Team 2: </label>
                     <select name="away_2_option" id="away_2_option"></select></div>
             </div>
-            
+
             <div class="selectPosition">
                 <div><label for="home_3_option">Home Team 3: </label>
                     <select name="home_3_option" id="home_3_option"></select></div>
@@ -73,7 +75,7 @@
                 <div><label for="away_5_option">Away Team 5: </label>
                     <select name="away_5_option" id="away_5_option"></select></div>
             </div>
-            
+
             <div class="selectPosition">
                 <div><label for="home_6_option">Home Team 6: </label><select name="home_6_option" id="home_6_option"></select></div>
                 <div><label for="away_6_option">Away Team 6: </label><select name="away_6_option" id="away_6_option"></select></div>
@@ -83,8 +85,11 @@
                 <input type="submit" id="insert_scorecard" value="Insert Scorecard" class="buttons">
             </div>
 
-    </form>
+        </form>
+    </div>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/menu.js"></script>
 <script src="js/insertHockeyTeamName.js"></script>
 <script src="js/insertScorecard.js"></script>
 
