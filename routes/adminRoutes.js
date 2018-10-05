@@ -25,7 +25,7 @@ var router = function(app) {
 
     app.route('/insertScorecardResults').get(requireLogin,(req,res) => {
       res.sendFile(path.resolve('views/insertScorecardResults.html'));
-    })
+    });
     
     app.route('/api/getAllScoreCards').get((req, res) => {
         adminControllers.getAllScoreCards(app,req,res);
