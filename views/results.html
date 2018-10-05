@@ -6,18 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Match Results</title>
-<<<<<<< HEAD
     <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
     <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
-=======
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="/css/results.css" />
->>>>>>> Matt
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-<<<<<<< HEAD
     <header>
         <div class="container">
             <div class="menu">
@@ -45,40 +39,6 @@
     <div class="container">
         <div class="flex-container" id="rounds">
             <select id="roundDropdown" v-model="selected" v-on:change="dropDownChanged($event)">
-=======
-    <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="predictions">Play</a>
-                </li>
-                <li>
-                    <a href="results">Results</a>
-                </li>
-                <li>
-                    <a href="leaderboards">Leaderboards</a>
-                </li>
-                <li>
-                    <a href="settings">Settings</a>
-                </li>
-                <li class="flex-hang-right" id="login">
-                    <a href="login.html">Login</a>
-                </li>
-                <li id="register">
-                    <a href="registration.html">Register</a>
-                </li>
-                <li class="flex-hang-right" style="display:none" id= "logout">
-                    <a href="#" id="logout">Logout</a>
-                </li>
-            </ul>
-        </nav>
-
-    <h1>Results</h1>
-    <div class= "flex-container" id="rounds">
-        <select id="roundDropdown" v-model="selected" v-on:change="dropDownChanged($event)">
->>>>>>> Matt
                 <option v-for="round in rounds" v-bind:value="round.roundId">
                     {{ "Round " + (parseInt (round.roundId) +1) }}
                 </option>
@@ -117,7 +77,6 @@
             <div class="grid-item">
                 <h3 id="game_header">Game #2</h3>
 
-<<<<<<< HEAD
                 <div class="matchInfo">
 
                     <img class="home" id="team_image_3" src="" alt="Team 3" width="80" height="80">
@@ -129,34 +88,9 @@
                                 value="0" width="100" disabled>
                             <input class="quantity" id="away_team_2_pScore" type="number" name="away_team_2_pScore"
                                 value="0" width="100" disabled>
-=======
-                <div class="imageMargin"><img id="team_image_1" src="" alt="Team 1" width="80" height="80"></div>
-
-                <div>
-                    <p>Prediction</p>
-                    <p>
-                        <input id="home_team_1_pScore" type="number" name="home_team_1_pScore"  class="scoreInput" disabled>
-                        <input id="away_team_1_pScore" type="number" name="away_team_1_pScore"  class="scoreInput" disabled>
-
-                    </p>
-
-                    <p>Final Score</p>
-                    <p>
-                        <input id="home_team_1_aScore" type="number" name="home_team_1_aScore" class="scoreInput" disabled>
-                        <input id="away_team_1_aScore" type="number" name="away_team_1_aScore" class="scoreInput" disabled>
-                    </p>
-                </div>
-
-                <div class="imageMargin"><img id="team_image_2" src="" alt="Team 2" width="80" height="80"></div>
-            </div>
-        </div>
-        <div class="grid-item">
-            <h3 id="game_header">Game #2</h3>
->>>>>>> Matt
 
                         </p>
 
-<<<<<<< HEAD
                         <p>Final Score</p>
                         <p>
                             <input class="quantity" id="home_team_2_aScore" type="number" name="home_team_2_aScore"
@@ -194,52 +128,9 @@
                     </div>
                     <img class="away" id="team_image_6" src="" alt="Team 6" width="80" height="80">
                 </div>
-=======
-                <div class="imageMargin"><img id="team_image_3" src="" alt="Team 3" width="80" height="80"></div>
-
-                <div>
-                    <p>Prediction</p>
-                    <p>
-                        <input id="home_team_2_pScore" type="number" name="home_team_2_pScore" class="scoreInput" disabled>
-                        <input id="away_team_2_pScore" type="number" name="away_team_2_pScore" class="scoreInput" disabled>
-
-                    </p>
-
-                    <p>Final Score</p>
-                    <p>
-                        <input id="home_team_2_aScore" type="number" name="home_team_2_aScore" class="scoreInput" disabled>
-                        <input id="away_team_2_aScore" type="number" name="away_team_2_aScore" class="scoreInput" disabled>
-                    </p>
-                </div>
-
-                <div class="imageMargin"><img id="team_image_4" src="" alt="Team 4" width="80" height="80"></div>
-            </div>
-        </div>
-        <div class="grid-item">
-            <h3 id="game_header">Game #3</h3>
-
-            <div class="matchInfo">
-                <div class="imageMargin"><img id="team_image_5" src="" alt="Team 5" width="80" height="80"></div>
-                <div>
-                    <p>Prediction</p>
-                    <p>
-                        <input id="home_team_3_pScore" type="number" name="home_team_3_pScore" class="scoreInput" disabled>
-                        <input id="away_team_3_pScore" type="number" name="away_team_3_pScore" class="scoreInput" disabled>
-
-                    </p>
-
-                    <p>Final Score</p>
-                    <p>
-                        <input id="home_team_3_aScore" type="number" name="home_team_3_aScore" class="scoreInput" disabled>
-                        <input id="away_team_3_aScore" type="number" name="away_team_3_aScore" class="scoreInput" disabled>
-                    </p>
-                </div>
-            <div class="imageMargin"><img id="team_image_6" src="" alt="Team 6" width="80" height="80"></div>
->>>>>>> Matt
             </div>
         </div>
 
-<<<<<<< HEAD
         <div class="flex-container">
             <div class="grid-item">
                 <h3 id="game_header">Game #4</h3>
@@ -317,72 +208,9 @@
                     </div>
                     <img class="away" id="team_image_12" src="" alt="Team 12" width="80" height="80">
                 </div>
-=======
-            <div class="matchInfo">
-                <div class="imageMargin"> <img id="team_image_7" src="" alt="Team 7" width="80" height="80"></div>
-                <div>
-                    <p>Prediction</p>
-                    <p>
-                        <input id="home_team_4_pScore" type="number" name="home_team_4_pScore" class="scoreInput" disabled>
-                        <input id="away_team_4_pScore" type="number" name="away_team_4_pScore" class="scoreInput" disabled>
-
-                    </p>
-
-                    <p>Final Score</p>
-                    <p>
-                        <input id="home_team_4_aScore" type="number" name="home_team_4_aScore" class="scoreInput" disabled>
-                        <input id="away_team_4_aScore" type="number" name="away_team_4_aScore" class="scoreInput" disabled>
-                    </p>
-                </div>
-                <div class="imageMargin"><img id="team_image_8" src="" alt="Team 8" width="80" height="80"></div>
-            </div>
-        </div>
-        <div class="grid-item">
-            <h3 id="game_header">Game #5</h3>
-
-            <div class="matchInfo">
-                <div class="imageMargin"><img id="team_image_9" src="" alt="Team 9" width="80" height="80"></div>
-                <div>
-                    <p>Prediction</p>
-                    <p>
-                        <input id="home_team_5_pScore" type="number" name="home_team_5_pScore" class="scoreInput" disabled>
-                        <input id="away_team_5_pScore" type="number" name="away_team_5_pScore" class="scoreInput" disabled>
-
-                    </p>
-
-                    <p>Final Score</p>
-                    <p>
-                        <input id="home_team_5_aScore" type="number" name="home_team_5_aScore" class="scoreInput" disabled>
-                        <input id="away_team_5_aScore" type="number" name="away_team_5_aScore" class="scoreInput" disabled>
-                    </p>
-                </div>
-                <div class="imageMargin"><img id="team_image_10" src="" alt="Team 10" width="80" height="80"></div>
-            </div>
-        </div>
-        <div class="grid-item">
-            <h3 id="game_header">Game #6</h3>
-
-            <div class="matchInfo">
-                <div class="imageMargin"><img id="team_image_11" src="" alt="Team 11" width="80" height="80"></div>
-                <div>
-                    <p>Prediction</p>
-                    <p>
-                        <input id="home_team_6_pScore" type="number" name="home_team_6_pScore" class="scoreInput" disabled>
-                        <input id="away_team_6_pScore" type="number" name="away_team_6_pScore" class="scoreInput" disabled>
-                    </p>
-
-                    <p>Final Score</p>
-                    <p>
-                        <input id="home_team_6_aScore" type="number" name="home_team_6_aScore" class="scoreInput" disabled>
-                        <input id="away_team_6_aScore" type="number" name="away_team_6_aScore" class="scoreInput" disabled>
-                    </p>
-                </div>
-                <div class="imageMargin"><img id="team_image_12" src="" alt="Team 12" width="80" height="80"></div>
->>>>>>> Matt
             </div>
         </div>
 
-<<<<<<< HEAD
         <div class="flex-container">
             <p>
                 <label for="first_player_1_to_score">First Goal scored in the minute: </label>
@@ -406,13 +234,6 @@
                 </div>
             </form>
         </div>
-=======
-    <div class= "flex-container">
-        <p>
-            <label for="first_player_1_to_score">First Goal scored in the minute: </label>
-            <input type="text" name="first_player_1_to_score" id="first_player_1_to_score" disabled>
-        </p>
->>>>>>> Matt
     </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
