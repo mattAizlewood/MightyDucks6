@@ -1,5 +1,4 @@
-
-/* * {
+* * {
     box-sizing: border-box;
 } */
 
@@ -145,22 +144,22 @@ h2 {
 /* Login/Registration CSS */
 .loginButtons {
     -webkit-appearance: none;
-    width: 25%;
-    height: 45px;
+    /* width: 25%;
+    height: 45px; */
     color: white;
-    background-color: #f0b240;
+    /* background-color: #f0b240; */
     text-align: center; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 10pt;
+    /* font-size: 10pt; */
     margin: auto;
     text-align: center;
 }
 
 #login {
     color: white;
-    background-color: #f0b240;
-    width: 25%;
-    height: 45px;
+    /* background-color: #f0b240; */
+    /* width: 25%;
+    height: 45px; */
 }
 
 .buttons {
@@ -267,10 +266,34 @@ h2 {
 }
 
 /* Results CSS */
+
 #first_player_1_to_score {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 8pt;
     color: black;
+}
+
+.results_home {
+    width:20%;
+    height: 20%;
+    position: relative;
+    right: 0.5%;
+    top: 75px;
+}
+
+.results_quantity {
+    width: 20%;
+    height: 15%;
+    margin: 2.5%;
+    justify-content: center;
+}
+
+.results_away {
+    width: 20%;
+    height: 20%;
+    position: relative;
+    left: 0.5%;
+    top: 75px;
 }
 
 /* Leaderboards CSS */
@@ -354,62 +377,12 @@ tr:nth-child(even) {
     margin: 5px;
 }
 
-#home_1_option {
+.team_name {
     border: 1px solid #6d6f70;
     margin: 5px;
 }
 
-#home_2_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#home_3_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#home_4_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#home_5_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#home_6_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#away_1_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#away_2_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#away_3_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#away_4_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#away_5_option {
-    border: 1px solid #6d6f70;
-    margin: 5px;
-}
-
-#away_6_option {
+.results_score {
     border: 1px solid #6d6f70;
     margin: 5px;
 }
@@ -422,7 +395,7 @@ tr:nth-child(even) {
 #insert_scorecard {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10pt;
-    width: 30%;
+    width: 35%;
     height: 45px;
     color: white;
     background-color: #f0b240;
@@ -431,7 +404,7 @@ tr:nth-child(even) {
 #insert_scorecard_results {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10pt;
-    width: 40%;
+    width: 45%;
     height: 45px;
     color: white;
     background-color: #f0b240;
@@ -466,12 +439,29 @@ tr:nth-child(even) {
 #insertScorecardResults {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 10pt;
+    width: 45%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+} 
+
+#allScorecards {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
     width: 40%;
     height: 45px;
     color: white;
     background-color: #f0b240;
 }
 
+#allScorecardResults {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 50%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+} 
 
 
 /* Match CSS */
@@ -485,7 +475,7 @@ tr:nth-child(even) {
     display: flex;
     flex-wrap: nowrap;
     background-color: transparent;
-    width: 100%;
+ 
 }
   
 .grid-item {
@@ -509,26 +499,24 @@ tr:nth-child(even) {
 }
 
 .home {
-    width:25%;
-    height: 25%;
+    width:20%;
+    height: 20%;
     position: relative;
-    left: 2.5%;
-    top: 75px;
+    right: 7.5%;
 }
 
 .quantity {
-    width: 15%;
+    width: 20%;
     height: 15%;
     margin: 2.5%;
     justify-content: center;
 }
 
 .away {
-    width: 25%;
-    height: 25%;
+    width: 20%;
+    height: 20%;
     position: relative;
-    right: 2.5%;
-    top: 75px;
+    left: 7.5%;
 }
 
 

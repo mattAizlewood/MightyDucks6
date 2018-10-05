@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,60 +8,31 @@
     <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
     <title>Login</title>
 </head>
-
 <body>
-
-    <header>
-        <div class="container">
-            <div class="menu">
-                <div class="menu_icon">
-                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png"  alt="Menu Bar">
-                </div>
-            </div>
-
-            <!-- Navigation Bar -->
-            <nav>
-                <ul id="nav_bar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="registration.html">Register</a></li>
-                    <li><a href="results.html">Result</a></li>
-                    <li><a href="leaderboards.html">Leaderboards</a></li>
-                    <li><a href="predictions.html">Predictions</a></li>
-                    <li><a href="leagues.html">Leagues</a></li>
-                    <li><a href="/settings.html">Settings</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
+    
     <div class="container">
         <h1>Login</h1>
 
         <form id="frmLogin">
-            <div>
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email" required>
-            </div>
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                </div>
 
-            <div>
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="password" required>
-            </div>
-            <div>
-                <input type="submit" value="Login" class="loginButtons">
-            </div>
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password" required>        
+                </div>
+                <div>
+                    <input type="submit" value="Login"  class = "loginButtons">
+                </div>
         </form>
-        <div class="flex-container" id="registration_container">
-            <button class="loginButtons" onclick="location.href='registration.html';"> Register a new account</button>
+        <div class="flex-container">
+            <button class = "loginButtons" onclick="location.href='registration.html';"> Register a new account</button>
         </div>
-
+        
     </div>
 
 </body>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="js/menu.js"></script>
 <script src="js/login.js"></script>
-
 </html>

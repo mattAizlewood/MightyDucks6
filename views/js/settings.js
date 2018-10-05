@@ -1,30 +1,4 @@
 (function(){
-<<<<<<< HEAD
-    var myForm = document.getElementById('frmLogin');
-    console.log(myForm);
-    myForm.addEventListener("submit", function(ev){
-        ev.preventDefault();
-        let email = document.getElementById('email').value;
-        let password = document.getElementById('password').value;
-        let formData = {
-            "email" : email,
-            "password" : password,
-        };
-
-        let endPoint = "/api/getUser";
-        fetch(endPoint, {
-            method: "post",
-            body: JSON.stringify(formData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(myData){
-
-=======
 
     let endPoint = "/api/getUser";
     fetch(endPoint, {
@@ -42,7 +16,6 @@
             document.getElementById("register").style.display = "none";
             document.getElementById("logout").style.display = "block";
 
->>>>>>> Matt
             console.log(myData.status);
             if (myData.status === "admin")
             {

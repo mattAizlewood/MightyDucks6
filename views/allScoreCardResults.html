@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>All Results - Admin</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="/css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Results - Admin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
 </head>
+
 <body>
-        <nav>
+    <header>
+        <div class="container">
+            <div class="menu">
+                <div class="menu_icon">
+                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png" alt="Menu Bar">
+                </div>
+            </div>
+            <nav>
                 <ul>
                     <li>
                         <a href="index.html">Home</a>
@@ -20,9 +30,9 @@
                     <li>
                         <a href="results.html">Results</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="scorecard.html">Scorecard</a>
-                    </li>
+                    </li> -->
                     <li>
                         <a href="leaderboards.html">Leaderboards</a>
                     </li>
@@ -33,27 +43,33 @@
                         <a href="login.html">Login</a>
                     </li>
                 </ul>
-        </nav>
+            </nav>
+        </div>
+    </header>
 
-        <table id="allResults">
-            <tr>
-                <th>Round No.</th>
-                <th>Match 1</th>
-                <th>Match 2</th>
-                <th>Match 3</th>
-                <th>Match 4</th>
-                <th>Match 5</th>
-                <th>Match 6</th>
-                <th>First Goal</th>
-                <th>Delete</th>
-                
-            </tr>
-        </table>
+    <table id="allResults">
+        <tr>
+            <th>Round No.</th>
+            <th>Match 1</th>
+            <th>Match 2</th>
+            <th>Match 3</th>
+            <th>Match 4</th>
+            <th>Match 5</th>
+            <th>Match 6</th>
+            <th>First Goal</th>
+            <th>Delete</th>
+
+        </tr>
+    </table>
 
 
-        <script src="/js/allScoreCardResultsAdmin.js">
-            
-        </script>
-    
+    <script src="/js/allScoreCardResultsAdmin.js">
+
+
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
 </body>
+
 </html>

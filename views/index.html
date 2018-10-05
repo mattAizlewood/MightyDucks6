@@ -1,42 +1,55 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Play Mighty Ducks</title>   
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Play Mighty Ducks</title>
     <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
     <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
- 
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <div class="menu">
                 <div class="menu_icon">
-                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png"  alt="Menu Bar">
+                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png" alt="Menu Bar">
                 </div>
             </div>
-
-            <!-- Navigation Bar -->
             <nav>
-                <ul id="nav_bar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="registration.html">Register</a></li>
-                    <li><a href="results.html">Result</a></li>
-                    <li><a href="leaderboards.html">Leaderboards</a></li>
-                    <li><a href="predictions.html">Predictions</a></li>
-                    <li><a href="leagues.html">Leagues</a></li>
-                    <li><a href="/settings.html">Settings</a></li>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="predictions">Play</a>
+                    </li>
+                    <li>
+                        <a href="results">Results</a>
+                    </li>
+                    <li>
+                        <a href="leaderboards">Leaderboards</a>
+                    </li>
+                    <li>
+                        <a href="settings">Settings</a>
+                    </li>
+                    <li class="flex-hang-right" id="login">
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li id="register">
+                        <a href="registration.html">Register</a>
+                    </li>
+                    <li class="flex-hang-right" style="display:none" id="logout">
+                        <a href="#" id="logout">Logout</a>
+                    </li>
                 </ul>
             </nav>
-        </div>
+            </div>
     </header>
 
-     <div class="container">
+    <div class="container">
         <div class="banner">
             <img id="index_banner_image" src="images/Index Banner.jpg" alt="Mighty Ducks Banner Image">
         </div>
@@ -108,7 +121,8 @@
                         Score
                         Result,
                         Match Winner First player to score each week, etc).</p>
-                    <p align="justify"> 3. Sit back, relax and keep an eye out for the results at the end of the week!
+                    <p align="justify"> 3. Sit back, relax and keep an eye out for the results at the end of the
+                        week!
                         Correct
                         predictions will earn you points and help you rise up the leaderboards.</p>
                 </div>
@@ -118,11 +132,10 @@
                 </div>
 
             </div>
-        </div> 
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/populateScorecard.js"></script>
-</body>
 
 </html>
