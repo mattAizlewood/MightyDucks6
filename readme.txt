@@ -21,3 +21,6 @@ db.MightyDucks6.find({})
 db.MightyDucks6.find({columName})
 db.MightyDucks6.find({columName : value})
 db.Users.insertOne({ UserID : 1, Name : "Jack Jones", Email : "JackJones12@gmail.com", Persona : "JackyJ12", Password : "NYR4ng3rF4n", Salt : "", Country : "United States of America" })
+
+
+When running make sure that 'Global' leaderboard exists in Leaderboards with id of 1
