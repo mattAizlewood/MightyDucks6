@@ -89,8 +89,9 @@ module.exports = {
                 match5Prediction = prediction.roundPredictions.match5;
                 match6Prediction = prediction.roundPredictions.match6;
                 minutesPrediction = prediction.roundPredictions.firstScorerMinutes;
-
+                
                 let scorecard = scores.scores.find(item => item.roundId === roundId);
+                
 
                 // if they guessed the exact score give 3 points
                 //else if they guesses the exact score give 1 point
