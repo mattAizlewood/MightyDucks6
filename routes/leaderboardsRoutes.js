@@ -7,7 +7,7 @@ var leaderboardControllers = require('../controllers/leaderboardController.js');
 
 var router = function(app) {
     
-    app.route("/leaderboards").get(requireLogin,function(req,res) {
+    app.route("/leaderboards").get(function(req,res) {
         res.sendFile(path.resolve('views/leaderboards.html'));
     });
     

@@ -11,7 +11,7 @@ module.exports = {
         res.json({'msg':'successful'});
     },
     insertUserPredictions: (app, req, res) => {
-        app.get('myDb').collection('predictions').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
+        app.get('myDb').collection('scorecard').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
                 console.log(err);
             } else {
@@ -19,7 +19,7 @@ module.exports = {
                 if (docs.length < 1) {
                     maxID = 0;
                 } else {
-                    maxID = docs[0].roundId + 1;
+                    maxID = docs[0].roundId;
                 }
 
                 app.get('myDb').collection('predictions').insertOne({
