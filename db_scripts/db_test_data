@@ -110,7 +110,7 @@ var predictionsData = [
     { 
         "userId": "5bae0158bfa4a562ad6a5b4e",
         "roundId" : 0, 
-        "roundPredictions": {
+        "predictionsInfo": {
             "match1" : { "home" : 3, "away" : 5 }, 
             "match2" : { "home" : 6, "away" : 1 }, 
             "match3" : { "home" : 1, "away" : 0 }, 
@@ -122,7 +122,7 @@ var predictionsData = [
     {   
         "userId": "5bae0158bfa4a562ad6a5b4e",
         "roundId" : 1, 
-        "roundPredictions": {
+        "predictionsInfo": {
             "match1" : { "home" : 2, "away" : 2 }, 
             "match2" : { "home" : 2, "away" : 4 }, 
             "match3" : { "home" : 0, "away" : 5 }, 
@@ -134,7 +134,7 @@ var predictionsData = [
     {   
         "userId": "5bae0158bfa4a562ad6a5b4e",
         "roundId" : 2, 
-        "roundPredictions": {
+        "predictionsInfo": {
             "match1" : { "home" : 1, "away" : 1 }, 
             "match2" : { "home" : 2, "away" : 2 }, 
             "match3" : { "home" : 3, "away" : 3 }, 
