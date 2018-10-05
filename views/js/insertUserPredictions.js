@@ -1,5 +1,5 @@
 var userPredictionsForm = document.getElementById('predictionsForm');
-
+  
 userPredictionsForm.addEventListener('submit', (ev) => {
     ev.preventDefault();
 
@@ -14,6 +14,7 @@ userPredictionsForm.addEventListener('submit', (ev) => {
             "Postman-Token": "19e76192-be2d-4bb5-985d-aab883b08756"
         },
         "data": {
+            // 'userId' :  user._id,
             "home1Score": document.getElementById('home_team_1_score').value,
             "away1Score": document.getElementById('away_team_1_score').value,
             "home2Score": document.getElementById('home_team_2_score').value,
@@ -29,9 +30,29 @@ userPredictionsForm.addEventListener('submit', (ev) => {
             "firstScorerMinutes": document.getElementById('first_scorer_minutes').value
         }
     }
-
+    console.log(settings.data);
     $.ajax(settings).done();
 
     window.alert('Your Predictions have been submitted, be sure to check the results page to see how you did!');
     window.location.href="index.html";
 });
+
+document.getElementById("logout").addEventListener("click", function(){
+    var endPoint = "/api/logout"
+    fetch(endPoint, {
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        if (data.msg ==="successful")
+        {
+            window.location.href = "index.html";
+        }
+        
+    })
+})

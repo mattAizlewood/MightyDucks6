@@ -78,8 +78,9 @@ module.exports = {
                 throw err
             }
             else {
-                
-                res.json({'persona':docs.persona});
+                var json = {'persona':docs.persona};
+                json.isUserLoggedIn = req.user != null;
+                res.json(json);
             }
         });
     }

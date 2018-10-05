@@ -9,10 +9,13 @@ var router = function (app) {
     .post((req,res) => userControllers.login(app,req,res))
 
     app.route('/api/getUser')
-    .post((req,res) => userControllers.getUser(app,req,res))
+    .get((req,res) => userControllers.getUser(app,req,res))
     
     app.route('/registration')
         .post((req, res) => userControllers.register(app, req, res))
+
+    app.route('/api/logout')
+    .get((req,res) => userControllers.logout(app,req,res))
 };
 
 module.exports = router;

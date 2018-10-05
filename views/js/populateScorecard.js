@@ -18,6 +18,12 @@
 
             console.info(window.location.href);
 
+            if (scorecardData[0].isUserLoggedIn){
+                document.getElementById("login").style.display = "none";
+                document.getElementById("register").style.display = "none";
+                document.getElementById("logout").style.display = "block";
+            }
+
             if (window.location.href == 'http://localhost:3000/index.html' || window.location.href == 'http://localhost:3000') {
                 //Round
                 document.getElementById('current_week').innerHTML = "Round: " + scorecardData[0].roundId
@@ -55,4 +61,24 @@
             document.getElementById('home_6').src = "../images/" + scorecardData[0].roundInfo.match6.homeTeam + ".png"
             document.getElementById('away_6').src = "../images/" + scorecardData[0].roundInfo.match6.awayTeam + ".png"
         });
+    
+        document.getElementById("logout").addEventListener("click", function(){
+            var endPoint = "/api/logout"
+            fetch(endPoint, {
+                method: 'get',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                if (data.msg ==="successful")
+                {
+                    window.location.href = "index.html";
+                }
+                
+            })
+        })
 })();

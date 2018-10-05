@@ -1,6 +1,8 @@
 
 .matchInfo{
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .flex-container {
@@ -22,3 +24,13 @@
       margin: 15px;
   }
   
+  .scoreInput{
+      height: 50px;
+      width: 50px;
+  }
+  
+  .imageMargin{
+      margin: 40px;
+  }
+  
+

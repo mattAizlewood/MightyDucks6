@@ -11,7 +11,7 @@ module.exports = {
         res.json({'msg':'successful'});
     },
     insertUserPredictions: (app, req, res) => {
-        app.get('myDb').collection('predictions').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
+        app.get('myDb').collection('scorecard').find().sort({ 'roundId': -1 }).limit(1).toArray((err, docs) => {
             if (err) {
                 console.log(err);
             } else {
@@ -19,12 +19,13 @@ module.exports = {
                 if (docs.length < 1) {
                     maxID = 0;
                 } else {
-                    maxID = docs[0].roundId + 1;
+                    maxID = docs[0].roundId;
                 }
 
                 app.get('myDb').collection('predictions').insertOne({
                     'roundId': maxID,
-                    'userId' : req.body.userId,
+                    // 'userId' : req.body.userId,
+                    'userId' : req.user._id+"",
                     'predictionsInfo': {
                         "match1": { "homeTeam1Score": req.body.home1Score, "awayTeam1Score": req.body.away1Score },
                         "match2": { "homeTeam2Score": req.body.home2Score, "awayTeam2Score": req.body.away2Score },

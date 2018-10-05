@@ -9,7 +9,7 @@ var calculateScoreControllers = require('../controllers/calculateScoresControlle
 
 var router = function(app) {
     
-    app.route("/results").get(function(req,res) {
+    app.route("/results").get(requireLogin,function(req,res) {
         res.sendFile(path.resolve('views/results.html'));
     });
     
@@ -46,3 +46,11 @@ var router = function(app) {
 };
 
 module.exports = router;
+
+function requireLogin (req, res, next) {
+    if (!req.user) {
+      res.redirect('/login.html');
+    } else {
+      next();
+    }
+  };

@@ -1,5 +1,4 @@
 (function(){
-    var user = null;
     var app;
 
     let endPoint = "/api/getAllRounds";
@@ -22,47 +21,19 @@
             methods: {
                 dropDownChanged: function () {
                     setRoundResults(this.$data.selected);
-
-                    if (user){
-                        setUserPredictions(this.$data.selected, user._id);
-                    }
+                    setUserPredictions(this.$data.selected);
                 }
             }
           })
         setRoundResults(myData.length -1);
-    })
+        setUserPredictions(myData.length -1)
 
-
-
-    var myForm = document.getElementById('frmLogin');
-    myForm.addEventListener("submit", function(ev){
-        ev.preventDefault();
-        let email = document.getElementById('email').value;
-        let password = document.getElementById('password').value;
-
-        let formData = {
-            "email" : email,
-            "password" : password,
-        };
-
-        let endPoint = "/api/getUser";
-        fetch(endPoint, {
-            method: "post",
-            body: JSON.stringify(formData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(myData){
-            user = myData;
-            var roundDropDown = document.getElementById("roundDropdown");
-            setUserPredictions(roundDropDown.selectedIndex, user._id);
-        })
-    })
-  
+        if (myData[0].isUserLoggedIn){
+            document.getElementById("login").style.display = "none";
+            document.getElementById("register").style.display = "none";
+            document.getElementById("logout").style.display = "block";
+        }
+    }) 
 })();
 
 
@@ -115,17 +86,15 @@ function setRoundResults(roundId){
             document.getElementById("first_player_1_to_score").value = myData.roundInfo.firstScorerMinutes;
 
         }
-
-        console.dir(myData);
     })
 }
 
 
-function setUserPredictions(roundId, userId){
+function setUserPredictions(roundId){
     console.info(roundId);
     fetch('/api/getUserPredictions', {
         method: "post",
-        body: JSON.stringify({"roundId": roundId, "userId": userId}), 
+        body: JSON.stringify({"roundId": roundId}), 
         headers: {
             'Content-Type': 'application/json'
         }
@@ -136,18 +105,18 @@ function setUserPredictions(roundId, userId){
     .then(function(myData){
         
         if(myData != null){
-            document.getElementById("home_team_1_pScore").value = myData.roundPredictions.match1.home;
-            document.getElementById("away_team_1_pScore").value = myData.roundPredictions.match1.away;
-            document.getElementById("home_team_2_pScore").value = myData.roundPredictions.match2.home;
-            document.getElementById("away_team_2_pScore").value = myData.roundPredictions.match2.away;
-            document.getElementById("home_team_3_pScore").value = myData.roundPredictions.match3.home;
-            document.getElementById("away_team_3_pScore").value = myData.roundPredictions.match3.away;
-            document.getElementById("home_team_4_pScore").value = myData.roundPredictions.match4.home;
-            document.getElementById("away_team_4_pScore").value = myData.roundPredictions.match4.away;
-            document.getElementById("home_team_5_pScore").value = myData.roundPredictions.match5.home;
-            document.getElementById("away_team_5_pScore").value = myData.roundPredictions.match5.away;
-            document.getElementById("home_team_6_pScore").value = myData.roundPredictions.match6.home;
-            document.getElementById("away_team_6_pScore").value = myData.roundPredictions.match6.away;
+            document.getElementById("home_team_1_pScore").value = myData.predictionsInfo.match1.home;
+            document.getElementById("away_team_1_pScore").value = myData.predictionsInfo.match1.away;
+            document.getElementById("home_team_2_pScore").value = myData.predictionsInfo.match2.home;
+            document.getElementById("away_team_2_pScore").value = myData.predictionsInfo.match2.away;
+            document.getElementById("home_team_3_pScore").value = myData.predictionsInfo.match3.home;
+            document.getElementById("away_team_3_pScore").value = myData.predictionsInfo.match3.away;
+            document.getElementById("home_team_4_pScore").value = myData.predictionsInfo.match4.home;
+            document.getElementById("away_team_4_pScore").value = myData.predictionsInfo.match4.away;
+            document.getElementById("home_team_5_pScore").value = myData.predictionsInfo.match5.home;
+            document.getElementById("away_team_5_pScore").value = myData.predictionsInfo.match5.away;
+            document.getElementById("home_team_6_pScore").value = myData.predictionsInfo.match6.home;
+            document.getElementById("away_team_6_pScore").value = myData.predictionsInfo.match6.away;
         }
         else{
             document.getElementById("home_team_1_pScore").value = 0;
@@ -166,3 +135,22 @@ function setUserPredictions(roundId, userId){
     })
 }
 
+document.getElementById("logout").addEventListener("click", function(){
+    var endPoint = "/api/logout"
+    fetch(endPoint, {
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        if (data.msg ==="successful")
+        {
+            window.location.href = "index.html";
+        }
+        
+    })
+})

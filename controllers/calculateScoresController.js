@@ -1,4 +1,5 @@
 var {ObjectId} = require('mongodb');
+const util = require('util');
 
 module.exports = {
     updateAllScores: (app,req,res) => {
@@ -73,7 +74,7 @@ module.exports = {
         thePromise.then((data) => {
             let allScores = [];
             let scores = {'scores' : data[1]}
-
+            console.log(data[0]);
             //all user predictions loop
             data[0].forEach((prediction) => {
                 predictionScore = 0;
@@ -88,8 +89,9 @@ module.exports = {
                 match5Prediction = prediction.roundPredictions.match5;
                 match6Prediction = prediction.roundPredictions.match6;
                 minutesPrediction = prediction.roundPredictions.firstScorerMinutes;
-
+                
                 let scorecard = scores.scores.find(item => item.roundId === roundId);
+                
 
                 // if they guessed the exact score give 3 points
                 //else if they guesses the exact score give 1 point
@@ -218,7 +220,7 @@ module.exports = {
                         predictionScore = predictionScore + 1;
                     }
                 }
-                console.log(predictionScore);
+                //console.log(predictionScore);
                 
                 
                 //if they guessed within 5 mins of the firstscorer mins give points accordingly
@@ -249,7 +251,7 @@ module.exports = {
 
 
             });
-            console.log(allScores);
+            //console.log(allScores);
             return allScores;
         }).then((allScores)=> {
 
@@ -262,15 +264,15 @@ module.exports = {
             maxID = values[1];
             predictions = values[0];
             predictions.forEach((prediction) => {
-                console.log(prediction);
+                //console.log(prediction);
                 if(prediction.exists === true) {
                     app.get('myDb').collection('Leaderboards').updateOne({'userID':new ObjectId(prediction.userId),'leagueID':1}, {$set:{'score':prediction.score}});
                 } 
             });
             return Promise.all([values[0].filter(val => val.exists === false), maxID])
         }).then((values) => {
-            console.log(values[0])
-            console.log(values[1])
+            //console.log(values[0])
+            //console.log(values[1])
             maxID = values[1];
             predictions = values[0];
             predictions.map((prediction) => {
