@@ -5,7 +5,6 @@
         ev.preventDefault();
         let email = document.getElementById('email').value;
         let password = document.getElementById('password').value;
-
         let formData = {
             "email" : email,
             "password" : password,
@@ -23,6 +22,7 @@
             return response.json();
         })
         .then(function(myData){
+
             console.log(myData.status);
             if (myData.status === "admin")
             {

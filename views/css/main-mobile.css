@@ -1,0 +1,539 @@
+
+/* * {
+    box-sizing: border-box;
+} */
+
+/* Body CSS */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+header {
+    background-color: #488D83;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #488D83;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    color: #f0b240;
+}
+
+/* Menu CSS */
+
+.menu {
+    display: inline-block;
+    cursor: pointer;
+    padding: 4px;
+    background-color: #6d6f70;
+}
+
+#menu_bar_icon{
+    float:right;
+    width: 5%;
+    height: 5%;
+}
+
+
+/* Nav CSS */
+
+nav ul {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: #6d6f70;
+}
+
+nav ul li {
+    border-bottom:1px solid white;
+    padding:5px;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8pt;
+    color: white;
+    text-decoration: none;
+}
+
+/* nav>ul>li>h1 {
+    display: none;
+} */
+
+nav>ul>:first-child {
+    display: flex;
+} 
+
+/* Index CSS */
+
+#game_header{
+    font-size: 10pt;
+}
+
+.banner {
+    width: 100%;
+}
+
+#index_banner_image {
+    width: 100%;
+}
+
+#predictions_header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+}
+
+.current_home {
+    width:25%;
+    height: 25%;
+    position: relative;
+    right: 5%;
+}
+
+.versus {
+    width: 15%;
+    height: 15%;
+    margin: 2.5%;
+    justify-content: center;
+}
+
+.current_away {
+    width: 25%;
+    height: 25%;
+    position: relative;
+    left: 5%;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14pt;
+    color: #f0b240;
+}
+
+#homepage_howtoplay_content {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;  
+}
+
+#submit_button {
+    text-align: center;
+    margin: auto;
+}
+
+#play {
+    color: white;
+    background-color: #f0b240;
+    width: 25%;
+    height: 45px;
+}
+
+/* Login/Registration CSS */
+.loginButtons {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+    text-align: center; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    margin: auto;
+    text-align: center;
+}
+
+#login {
+    color: white;
+    background-color: #f0b240;
+    width: 25%;
+    height: 45px;
+}
+
+.buttons {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 50px;
+}
+
+#registration_container {
+    margin: 5px;
+    background-color: transparent;
+}
+
+#frmLogin {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8pt;
+}
+
+#firstName {
+    border: 0.5px solid black;
+    margin: 5px;
+}
+
+#surname {
+    border: 0.5px solid black;
+    margin: 5px;
+}
+
+#dob {
+    border: 0.5px solid black;
+    margin: 5px;
+}
+
+#persona {
+    border: 0.5px solid black;
+    margin: 5px;
+}
+
+#email {
+    border: 0.5px solid black;
+    margin: 5px;
+}
+
+#password {
+    margin: 5px;
+    border: 0.5px solid black;
+}
+
+#passwordConfirm {
+    margin: 5px;
+    border: 0.5px solid black;
+}
+
+#country {
+    margin: 5px;
+    border: 0.5px solid black;
+}
+
+#frmRegister {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8pt;
+}
+
+/* Predictions CSS */
+#predictionsForm {
+    width: 100%;
+}
+
+#row1 {
+    width: 100%;
+}
+
+#row2 {
+    width: 100%;
+}
+
+.home_prediction {
+    width:20%;
+    height: 20%;
+    position: relative;
+    right: 5%;
+}
+
+.away_prediction {
+    width:20%;
+    height: 20%;
+    position: relative;
+    left: 5%;
+}
+
+#golden_goal_description {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 9pt;
+}
+
+#submit_predictions {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 30%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+/* Results CSS */
+#first_player_1_to_score {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 8pt;
+    color: black;
+}
+
+/* Leaderboards CSS */
+#leaderboards_container1, #leaderboards_container2, #leaderboards_container3 {
+    background-color: transparent;
+}
+#country{
+    width: 135px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#Leaderboards {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+    margin: auto;
+}
+
+.small-centered-menu button {
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    background-color: #f0b240;
+    color: white;
+}
+
+.large-centered-menu {
+    
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    width: 90%;
+    border-radius: 4px;
+    height: 50px;
+
+}
+.flex-column {
+    flex-direction: column;
+}
+
+/* Settings CSS */
+#settings_container {
+    background-color: transparent;
+}
+
+#back {
+    color: white;
+    background-color: #f0b240;
+    height: 45px;
+    width: 20%;
+}
+
+/* Insert Scorecard/Results  */
+
+#date {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#home_1_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#home_2_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#home_3_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#home_4_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#home_5_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#home_6_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#away_1_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#away_2_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#away_3_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#away_4_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#away_5_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#away_6_option {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#first_scorer_minutes {
+    border: 1px solid #6d6f70;
+    margin: 5px;
+}
+
+#insert_scorecard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 30%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+#insert_scorecard_results {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 40%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+/* Admin CSS */
+
+#adminOptions {
+    display: none;
+}
+.adminOptions {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+#errorMessage{
+    display: none;
+    color:  red;
+}
+
+#insertScorecard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 40%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+#insertScorecardResults {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 40%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+
+
+/* Match CSS */
+.matchInfo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    width: 100%;
+}
+  
+.grid-item {
+    background-color: #f1f1f1;
+    flex-basis: 33%;
+    margin: 1px;
+    text-align: center;
+}
+
+#roundDropdown {
+    width: 200px;
+    height: 30px;
+    margin: 15px;
+    color: #f0b240;
+    border: 1px solid #6d6f70;
+}
+
+#game_header{
+    font-size: 8pt;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home {
+    width:25%;
+    height: 25%;
+    position: relative;
+    left: 2.5%;
+    top: 75px;
+}
+
+.quantity {
+    width: 15%;
+    height: 15%;
+    margin: 2.5%;
+    justify-content: center;
+}
+
+.away {
+    width: 25%;
+    height: 25%;
+    position: relative;
+    right: 2.5%;
+    top: 75px;
+}
+
+
+  
+
+
+
+

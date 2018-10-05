@@ -1,83 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Leaderboards</title>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
 </head>
+
 <body>
-
     <!-- NAV BAR -->
+    <header>
+        <div class="container">
+            <div class="menu">
+                <div class="menu_icon">
+                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png" alt="Mighty Ducks Banner Image">
+                </div>
+            </div>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="predictions.html">Play</a>
-            </li>
-            <li>
-                <a href="results.html">Results</a>
-            </li>
-            <li>
-                <a href="scorecard.html">Scorecard</a>
-            </li>
-            <li>
-                <a href="leaderboards.html">Leaderboards</a>
-            </li>
-            <li>
-                <a href="settings.html">Settings</a>
-            </li>
-            <li class="flex-hang-right">
-                <a href="login.html">Login</a>
-            </li>
-        </ul>
-    </nav>
+            <!-- Navigation Bar -->
+            <nav>
+                <ul id="nav_bar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="registration.html">Register</a></li>
+                    <li><a href="results.html">Result</a></li>
+                    <li><a href="leaderboards.html">Leaderboards</a></li>
+                    <li><a href="predictions.html">Predictions</a></li>
+                    <li><a href="leagues.html">Leagues</a></li>
+                    <li><a href="/settings.html">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- END NAV BAR -->
 
+    <div class="container">
+        <h1>Leaderboards</h1>
 
-    <!-- small centred menu for current scorecard, week and current season -->
-    <div class="flex-container flex-column">
-        <div class="small-centered-menu flex-container">
-            <button>Current</button>
-            <button>Week</button>
-            <button>Season</button>
+        <!-- small centred menu for current scorecard, week and current season -->
+        <div class="flex-container flex-column" id="leaderboards_container1">
+            <div class="small-centered-menu flex-container" id="leaderboards_container2">
+                <button>Current</button>
+                <button>Week</button>
+                <button>Season</button>
+            </div>
+            <br />
+            <div class="leaderboards-container large-centered-menu flex-container" id="leaderboards_container3">
+                <table id="Leaderboards">
+                    <tr>
+                        <th>
+                            Position
+                        </th>
+                        <th>
+                            User
+                        </th>
+                        <th>
+                            Score
+                        </th>
+                    </tr>
+                </table>
+
+            </div>
         </div>
-        <br/>
-                <div class="leaderboards-container large-centered-menu flex-container">
-                        <table id="Leaderboards" >
-                            <tr>
-                                <th>
-                                    Position
-                                </th>
-                                <th>
-                                    User
-                                </th>
-                                <th>
-                                    Score
-                                </th>
-                            </tr>
-                        </table>
-                
-                    </div>
-
-        
     </div>
     <!-- small centred menu end -->
-
-
-
-
-<script src="globalLeaderboards.js">
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="globalLeaderboards.js">
 //console.log(results);
-</script>
+    </script>
 </body>
+
 </html>

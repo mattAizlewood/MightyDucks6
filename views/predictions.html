@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Predictions</title>
-    <link rel="stylesheet" href="css/predictions-mobile.css">
-    <link rel="stylesheet" media="only screen and (min-width : 600px)" href="css/predictions-desktop.css">
+    <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <div class="container">
             <div class="menu">
                 <div class="menu_icon">
-                    <img id="menu_bar_icon" src="img/Menu Bars Icon.png" alt="Mighty Ducks Banner Image">
+                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png" alt="Menu Bar">
                 </div>
             </div>
 
@@ -37,84 +37,84 @@
 
     <div class="container">
         <!-- Predictions Page Title -->
-        <h1 id="predictions_header">Predictions</h1>
+        <h1>Predictions</h1>
 
         <div class="content">
             <div class="main">
                 <!-- Predictions Form Details -->
                 <form id="predictionsForm">
-                    <div class="flex-container">
+                    <div class="flex-container" id="row1">
                         <div class="grid-item">
                             <h3 id="game_header">Game #1</h3>
                             <div class="matchInfo">
-                                <img class="home" id="home_1" src="" alt="Home 1" width="80" height="80">
-                                <input class="quantity" id="home_team_1_score" type="number" name="home_team_1_score" min="0" max="100"
-                                    required>
-                                <input class="quantity" id="away_team_1_score" type="number" name="away_team_1_score" min="0" max="100"
-                                    required>
-                                <img class="away" id="away_1" src="" alt="Away 1" width="80" height="80">
+                                <img class="home_prediction" id="home_1" src="" alt="Home 1" width="80" height="80">
+                                <input class="quantity" id="home_team_1_score" type="number" name="home_team_1_score"
+                                    min="0" max="100" required>
+                                <input class="quantity" id="away_team_1_score" type="number" name="away_team_1_score"
+                                    min="0" max="100" required>
+                                <img class="away_prediction" id="away_1" src="" alt="Away 1" width="80" height="80">
                             </div>
                         </div>
                         <div class="grid-item">
                             <h3 id="game_header">Game #2</h3>
                             <div class="matchInfo">
-                                <img class="home" id="home_2" src="" alt="Home 2" width="80" height="80">
-                                <input class="quantity" id="home_team_2_score" type="number" name="home_team_2_score" min="0" max="100"
-                                    required>
-                                <input class="quantity" id="away_team_2_score" type="number" name="away_team_2_score" min="0" max="100"
-                                    required>
-                                <img class="away" id="away_2" src="" alt="Away 2" width="80" height="80">
+                                <img class="home_prediction" id="home_2" src="" alt="Home 2" width="80" height="80">
+                                <input class="quantity" id="home_team_2_score" type="number" name="home_team_2_score"
+                                    min="0" max="100" required>
+                                <input class="quantity" id="away_team_2_score" type="number" name="away_team_2_score"
+                                    min="0" max="100" required>
+                                <img class="away_prediction" id="away_2" src="" alt="Away 2" width="80" height="80">
                             </div>
                         </div>
                         <div class="grid-item">
                             <h3 id="game_header">Game #3</h3>
                             <div class="matchInfo">
-                                <img class="home" id="home_3" src="" alt="Team 5" width="80" height="80">
-                                <input class="quantity" id="home_team_3_score" type="number" name="home_team_3_score" min="0" max="100"
-                                    required>
-                                <input class="quantity" id="away_team_3_score" type="number" name="away_team_3_score" min="0" max="100"
-                                    required>
-                                <img class="away" id="away_3" src="" alt="Team 6" width="80" height="80">
+                                <img class="home_prediction" id="home_3" src="" alt="Team 5" width="80" height="80">
+                                <input class="quantity" id="home_team_3_score" type="number" name="home_team_3_score"
+                                    min="0" max="100" required>
+                                <input class="quantity" id="away_team_3_score" type="number" name="away_team_3_score"
+                                    min="0" max="100" required>
+                                <img class="away_prediction" id="away_3" src="" alt="Team 6" width="80" height="80">
                             </div>
                         </div>
                     </div>
-                    <div class="flex-container">
+                    <div class="flex-container" id="row2">
                         <div class="grid-item">
                             <h3 id="game_header">Game #4</h3>
                             <div class="matchInfo">
-                                <img class="home" id="home_4" src="" alt="Home 4" width="80" height="80">
-                                <input class="quantity" id="home_team_4_score" type="number" name="home_team_4_score" min="0" max="100"
-                                    required>
-                                <input class="quantity" id="away_team_4_score" type="number" name="away_team_4_score" min="0" max="100"
-                                    required>
-                                <img class="away" id="away_4" src="" alt="Away 4" width="80" height="80">
+                                <img class="home_prediction" id="home_4" src="" alt="Home 4" width="80" height="80">
+                                <input class="quantity" id="home_team_4_score" type="number" name="home_team_4_score"
+                                    min="0" max="100" required>
+                                <input class="quantity" id="away_team_4_score" type="number" name="away_team_4_score"
+                                    min="0" max="100" required>
+                                <img class="away_prediction" id="away_4" src="" alt="Away 4" width="80" height="80">
                             </div>
                         </div>
                         <div class="grid-item">
                             <h3 id="game_header">Game #5</h3>
                             <div class="matchInfo">
-                                <img class="home" id="home_5" src="" alt="Home 5" width="80" height="80">
-                                <input class="quantity" id="home_team_5_score" type="number" name="home_team_5_score" min="0" max="100"
-                                    required>
-                                <input class="quantity" id="away_team_5_score" type="number" name="away_team_5_score" min="0" max="100"
-                                    required>
-                                <img class="away" id="away_5" src="" alt="Away 5" width="80" height="80">
+                                <img class="home_prediction" id="home_5" src="" alt="Home 5" width="80" height="80">
+                                <input class="quantity" id="home_team_5_score" type="number" name="home_team_5_score"
+                                    min="0" max="100" required>
+                                <input class="quantity" id="away_team_5_score" type="number" name="away_team_5_score"
+                                    min="0" max="100" required>
+                                <img class="away_prediction" id="away_5" src="" alt="Away 5" width="80" height="80">
                             </div>
                         </div>
                         <div class="grid-item">
                             <h3 id="game_header">Game #6</h3>
                             <div class="matchInfo">
-                                <img class="home" id="home_6" src="" alt="Home 6" width="80" height="80">
-                                <input class="quantity" id="home_team_6_score" type="number" name="home_team_6_score" min="0" max="100"
-                                    required>
-                                <input class="quantity" id="away_team_6_score" type="number" name="away_team_6_score" min="0" max="100"
-                                    required>
-                                <img class="away" id="away_6" src="" alt="Away 6" width="80" height="80">
+                                <img class="home_prediction" id="home_6" src="" alt="Home 6" width="80" height="80">
+                                <input class="quantity" id="home_team_6_score" type="number" name="home_team_6_score"
+                                    min="0" max="100" required>
+                                <input class="quantity" id="away_team_6_score" type="number" name="away_team_6_score"
+                                    min="0" max="100" required>
+                                <img class="away_prediction" id="away_6" src="" alt="Away 6" width="80" height="80">
                             </div>
                         </div>
                     </div>
                     <div id="golden_goal">
-                        <p><b>The mintue of the first goal in any of the 6 matches.</b></p>
+                        <p id="golden_goal_description"><b>The Mintue of the 1st goal in any of the 6 matches.</b></p>
                         <p><label for="first_scorer_minutes">Golden Goal: </label><input type="number" name="first_scorer_minutes"
                                 id="first_scorer_minutes"></p>
                     </div>
@@ -125,13 +125,9 @@
             </div>
         </div>
 
-        <footer>
-            <p>&copy; Mighty Ducks 6</p>
-        </footer>
-
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/menu.js"></script>
     <script src="js/populateScorecard.js"></script>
 </body>
 

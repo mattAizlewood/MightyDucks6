@@ -17,7 +17,7 @@ module.exports = {
                 console.info("invalid password or email");
             }
             
-            //console.info(user);
+            // console.info(user);
         })
         //res.send(`view staff record: ${staffId}`);
     },

@@ -23,36 +23,36 @@
                 document.getElementById('current_week').innerHTML = "Round: " + scorecardData[0].roundId
 
                 //Versus
-                document.getElementById('versus_1').src = "../img/Versus.png"
-                document.getElementById('versus_2').src = "../img/Versus.png"
-                document.getElementById('versus_3').src = "../img/Versus.png"
-                document.getElementById('versus_4').src = "../img/Versus.png"
-                document.getElementById('versus_5').src = "../img/Versus.png"
-                document.getElementById('versus_6').src = "../img/Versus.png"
+                document.getElementById('versus_1').src = "../images/Versus.png"
+                document.getElementById('versus_2').src = "../images/Versus.png"
+                document.getElementById('versus_3').src = "../images/Versus.png"
+                document.getElementById('versus_4').src = "../images/Versus.png"
+                document.getElementById('versus_5').src = "../images/Versus.png"
+                document.getElementById('versus_6').src = "../images/Versus.png"
             }
 
             //Match 1
-            document.getElementById('home_1').src = "../img/" + scorecardData[0].roundInfo.match1.homeTeam + ".png"
-            document.getElementById('away_1').src = "../img/" + scorecardData[0].roundInfo.match1.awayTeam + ".png"
+            document.getElementById('home_1').src = "../images/" + scorecardData[0].roundInfo.match1.homeTeam + ".png"
+            document.getElementById('away_1').src = "../images/" + scorecardData[0].roundInfo.match1.awayTeam + ".png"
 
             // //Match 2
-            document.getElementById('home_2').src = "../img/" + scorecardData[0].roundInfo.match2.homeTeam + ".png"
-            document.getElementById('away_2').src = "../img/" + scorecardData[0].roundInfo.match2.awayTeam + ".png"
+            document.getElementById('home_2').src = "../images/" + scorecardData[0].roundInfo.match2.homeTeam + ".png"
+            document.getElementById('away_2').src = "../images/" + scorecardData[0].roundInfo.match2.awayTeam + ".png"
 
             // //Match 3
-            document.getElementById('home_3').src = "../img/" + scorecardData[0].roundInfo.match3.homeTeam + ".png"
-            document.getElementById('away_3').src = "../img/" + scorecardData[0].roundInfo.match3.awayTeam + ".png"
+            document.getElementById('home_3').src = "../images/" + scorecardData[0].roundInfo.match3.homeTeam + ".png"
+            document.getElementById('away_3').src = "../images/" + scorecardData[0].roundInfo.match3.awayTeam + ".png"
 
             // //Match 4
-            document.getElementById('home_4').src = "../img/" + scorecardData[0].roundInfo.match4.homeTeam + ".png"
-            document.getElementById('away_4').src = "../img/" + scorecardData[0].roundInfo.match4.awayTeam + ".png"
+            document.getElementById('home_4').src = "../images/" + scorecardData[0].roundInfo.match4.homeTeam + ".png"
+            document.getElementById('away_4').src = "../images/" + scorecardData[0].roundInfo.match4.awayTeam + ".png"
 
             // //Match 5
-            document.getElementById('home_5').src = "../img/" + scorecardData[0].roundInfo.match5.homeTeam + ".png"
-            document.getElementById('away_5').src = "../img/" + scorecardData[0].roundInfo.match5.awayTeam + ".png"
+            document.getElementById('home_5').src = "../images/" + scorecardData[0].roundInfo.match5.homeTeam + ".png"
+            document.getElementById('away_5').src = "../images/" + scorecardData[0].roundInfo.match5.awayTeam + ".png"
 
             // //Match 6
-            document.getElementById('home_6').src = "../img/" + scorecardData[0].roundInfo.match6.homeTeam + ".png"
-            document.getElementById('away_6').src = "../img/" + scorecardData[0].roundInfo.match6.awayTeam + ".png"
+            document.getElementById('home_6').src = "../images/" + scorecardData[0].roundInfo.match6.homeTeam + ".png"
+            document.getElementById('away_6').src = "../images/" + scorecardData[0].roundInfo.match6.awayTeam + ".png"
         });
 })();
