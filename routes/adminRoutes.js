@@ -15,6 +15,14 @@ var router = function(app) {
       res.sendFile(path.resolve('views/insertScoreCard.html'));
     });
 
+    app.route('/allScorecards').get(requireLogin,(req,res) => {
+        res.sendFile(path.resolve('views/allScorecards.html'));
+    });
+
+    app.route('/allScoreCardResults').get(requireLogin, (req,res) => {
+        res.sendFile(path.resolve('views/allScoreCardResults.html'));
+    });
+
     app.route('/insertScorecardResults').get(requireLogin,(req,res) => {
       res.sendFile(path.resolve('views/insertScorecardResults.html'));
     })
