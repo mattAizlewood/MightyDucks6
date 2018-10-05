@@ -6,10 +6,26 @@ var calculateScoreControllers = require('../controllers/calculateScoresControlle
 
 var router = function(app) {
 
-    app.route('/admin/settings').get((req,res) => {
+    app.route('/settings').get(requireLogin,(req,res) => {
         res.sendFile(path.resolve('views/settings.html'));
+    });
+
+    app.route('/insertScoreCard').get(requireLogin,(req,res) => {
+      res.sendFile(path.resolve('views/insertScoreCard.html'));
+    });
+
+    app.route('/insertScorecardResults').get(requireLogin,(req,res) => {
+      res.sendFile(path.resolve('views/insertScorecardResults.html'));
     });
     
 };
 
 module.exports = router;
+
+function requireLogin (req, res, next) {
+    if (!req.user) {
+      res.redirect('/login.html');
+    } else {
+      next();
+    }
+  };

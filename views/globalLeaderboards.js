@@ -37,6 +37,11 @@
                 }
             }
             $.ajax(settingsForPersona).done((response) => {
+                if (response.isUserLoggedIn){
+                    document.getElementById("login").style.display = "none";
+                    document.getElementById("register").style.display = "none";
+                    document.getElementById("logout").style.display = "block";
+                }
                 console.log(response);
                 res[i].persona = response.persona;
             });
@@ -67,4 +72,24 @@
     
         
     });
+
+    document.getElementById("logout").addEventListener("click", function(){
+        var endPoint = "/api/logout"
+        fetch(endPoint, {
+            method: 'get',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            if (data.msg ==="successful")
+            {
+                window.location.href = "index.html";
+            }
+            
+        })
+    })
     })();

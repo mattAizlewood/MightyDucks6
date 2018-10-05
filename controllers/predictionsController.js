@@ -24,7 +24,8 @@ module.exports = {
 
                 app.get('myDb').collection('predictions').insertOne({
                     'roundId': maxID,
-                    'userId' : req.body.userId,
+                    // 'userId' : req.body.userId,
+                    'userId' : req.user._id+"",
                     'predictionsInfo': {
                         "match1": { "homeTeam1Score": req.body.home1Score, "awayTeam1Score": req.body.away1Score },
                         "match2": { "homeTeam2Score": req.body.home2Score, "awayTeam2Score": req.body.away2Score },

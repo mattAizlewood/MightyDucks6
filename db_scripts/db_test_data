@@ -108,7 +108,7 @@ db.results.insert(resultsData);
 
 var predictionsData = [
     { 
-        "userId": "5ba21b004a1f34766c8732b3",
+        "userId": "5bae0158bfa4a562ad6a5b4e",
         "roundId" : 0, 
         "roundPredictions": {
             "match1" : { "home" : 3, "away" : 5 }, 
@@ -120,7 +120,7 @@ var predictionsData = [
             "firstScorerMinutes" : 34 }
     },
     {   
-        "userId": "5ba21b004a1f34766c8732b3",
+        "userId": "5bae0158bfa4a562ad6a5b4e",
         "roundId" : 1, 
         "roundPredictions": {
             "match1" : { "home" : 2, "away" : 2 }, 
@@ -132,7 +132,7 @@ var predictionsData = [
             "firstScorerMinutes" : 5}
     },
     {   
-        "userId": "5ba21b004a1f34766c8732b3",
+        "userId": "5bae0158bfa4a562ad6a5b4e",
         "roundId" : 2, 
         "roundPredictions": {
             "match1" : { "home" : 1, "away" : 1 }, 

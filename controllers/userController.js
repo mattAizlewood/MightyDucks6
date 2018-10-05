@@ -6,9 +6,11 @@ module.exports = {
                 console.error(err)
             }
             else if(user != null && user.password === req.body.password && user.status == "user"){
+                req.session.user = user;
                 res.redirect('/index.html');
             }
             else if (user != null && user.password === req.body.password && user.status == "admin") {
+                req.session.user = user;
                 console.info('Admin login successful');
                 res.redirect('/settings.html');
             }
@@ -40,18 +42,19 @@ module.exports = {
     },
 
     getUser: function(app, req, res){
-        let email = req.body.email;
-
-        app.get('myDb').collection('userCollection').findOne({"email": email},function (err, user) {
+        //let email = req.body.email;
+        
+        app.get('myDb').collection('userCollection').findOne({"email": req.user.email+""},function (err, user) {
             if (err) {
                 console.error(err)
             }
-            else if(user != null && user.password === req.body.password){
+            console.log(user);
                 res.json(user);
-            }
-            else{
-                console.info("invalid password or email");
-            }
+                
         })
+    },
+    logout: function(app, req, res){
+        req.session.destroy();
+        res.json({msg:"successful"});
     }
 }

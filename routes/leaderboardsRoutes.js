@@ -7,7 +7,7 @@ var leaderboardControllers = require('../controllers/leaderboardController.js');
 
 var router = function(app) {
     
-    app.route("/leaderboards").get(function(req,res) {
+    app.route("/leaderboards").get(requireLogin,function(req,res) {
         res.sendFile(path.resolve('views/leaderboards.html'));
     });
     
@@ -33,3 +33,11 @@ var router = function(app) {
 };
 
 module.exports = router;
+
+function requireLogin (req, res, next) {
+    if (!req.user) {
+      res.redirect('/login.html');
+    } else {
+      next();
+    }
+  };

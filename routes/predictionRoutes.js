@@ -5,7 +5,7 @@ var path = require("path");
 var predictionsController = require('../controllers/predictionsController.js');
 
 var router = function (app) {
-    app.route("/predictions").get(function (req, res) {
+    app.route("/predictions").get(requireLogin,function (req, res) {
         res.sendFile(path.resolve('views/predictions.html'));
     });
 
@@ -22,3 +22,11 @@ var router = function (app) {
     });
 };
 module.exports = router;
+
+function requireLogin (req, res, next) {
+    if (!req.user) {
+      res.redirect('/login.html');
+    } else {
+      next();
+    }
+  };

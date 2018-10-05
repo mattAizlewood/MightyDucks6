@@ -7,7 +7,7 @@ module.exports = {
             if (err) {
                 console.error(err)
             }
-            console.info(roundResults);
+
             res.json(roundResults);
 
         })
@@ -15,14 +15,13 @@ module.exports = {
 
     getUserPredictions: function (app, req, res) {
         let roundId = req.body.roundId;
-        let userId = req.body.userId;
-        app.get('myDb').collection('predictions').findOne({ $and: [{ "roundId": roundId }, { "userId": userId }] }, function (err, predictions) {
+
+        app.get('myDb').collection('predictions').findOne({ $and: [{ "roundId": roundId }, { "userId": req.user._id+"" }] }, function (err, predictions) {
             if (err) {
                 console.error(err)
             }
-            console.info(predictions);
+ 
             res.json(predictions);
-
         })
     },
 
@@ -32,6 +31,7 @@ module.exports = {
             if (err) {
                 console.error(err)
             }
+            roundResults[0].isUserLoggedIn = req.user != null;
             res.json(roundResults);
         })
     },
@@ -119,6 +119,8 @@ module.exports = {
                 console.log(err);
             }
             else {
+                docs[0].isUserLoggedIn = req.user != null;
+                console.log(docs);
                 res.json(docs);
             }
         });

@@ -62,3 +62,23 @@ form.addEventListener('submit', (ev) => {
 
 });
 
+document.getElementById("logout").addEventListener("click", function(){
+    var endPoint = "/api/logout"
+    fetch(endPoint, {
+        method: 'get',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(function (res) {
+        return res.json();
+    })
+    .then(function (data) {
+        if (data.msg ==="successful")
+        {
+            window.location.href = "index.html";
+        }
+        
+    })
+})
+
