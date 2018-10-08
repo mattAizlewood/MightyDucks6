@@ -91,7 +91,7 @@ module.exports = {
                 minutesPrediction = prediction.roundPredictions.firstScorerMinutes;
                 
                 let scorecard = scores.scores.find(item => item.roundId === roundId);
-                
+                console.log(scorecard);
 
                 // if they guessed the exact score give 3 points
                 //else if they guesses the exact score give 1 point

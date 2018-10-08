@@ -16,13 +16,20 @@ module.exports = {
     getUserPredictions: function (app, req, res) {
         let roundId = req.body.roundId;
 
-        app.get('myDb').collection('predictions').findOne({ $and: [{ "roundId": roundId }, { "userId": req.user._id+"" }] }, function (err, predictions) {
-            if (err) {
-                console.error(err)
-            }
+        // app.get('myDb').collection('predictions').findOne({ $and: [{ "roundId": roundId }, { "userId": req.user._id+"" }] }, function (err, predictions) {
+        //     if (err) {
+        //         console.error(err)
+        //     }
  
-            res.json(predictions);
-        })
+        //     res.json(predictions);
+        // })
+        app.get('myDb').collection('predictions').findOne({'roundId':roundId, 'userId':req.user._id+""}, function(err,docs) {
+            if(err) {
+                console.log(err);
+            } else {
+                res.json(docs);
+            }
+        });
     },
 
     getAllRounds: function (app, req, res) {
