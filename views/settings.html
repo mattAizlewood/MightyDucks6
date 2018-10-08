@@ -6,52 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Settings</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" media="screen and (min-width:415px)" href="css/main.css">
+    <link rel="stylesheet" media="screen and (max-width:414px)" href="css/main-mobile.css">
+
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="predictions">Play</a>
-            </li>
-            <li>
-                <a href="results">Results</a>
-            </li>
-            <li>
-                <a href="leaderboards">Leaderboards</a>
-            </li>
-            <li>
-                <a href="settings">Settings</a>
-            </li>
-            <li class="flex-hang-right" id="login">
-                <a href="login.html">Login</a>
-            </li>
-            <li id="register">
-                <a href="registration.html">Register</a>
-            </li>
-            <li class="flex-hang-right" style="display:none" id= "logout">
-                <a href="#" id="logout">Logout</a>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <div class="container">
+            <div class="menu">
+                <div class="menu_icon">
+                    <img id="menu_bar_icon" src="images/Menu Bars Icon.png" alt="Menu Bar">
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="predictions">Play</a>
+                    </li>
+                    <li>
+                        <a href="results">Results</a>
+                    </li>
+                    <li>
+                        <a href="leaderboards">Leaderboards</a>
+                    </li>
+                    <li>
+                        <a href="settings">Settings</a>
+                    </li>
+                    <li class="flex-hang-right" id="login">
+                        <a href="login.html">Login</a>
+                    </li>
+                    <li id="register">
+                        <a href="registration.html">Register</a>
+                    </li>
+                    <li class="flex-hang-right" style="display:none" id="logout">
+                        <a href="#" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div id="adminOptions" class="container">
-        <div class= "adminOptions">
-            <input type="submit" id="insertScorecard" value="Insert Scorecard" class= "buttons" onclick="window.location='/insertScorecard'">
-        </div>
-        
-        <div class= "adminOptions">
-            <input type="submit" id="insertScorecardResults" value="Insert Scorecard Results" class= "buttons" onclick="window.location='/insertScorecardResults'">
-        </div>
-        
-        <div class= "adminOptions">
-                <input type="submit" id="allScorecards" value="View All Scorecards" class= "buttons" onclick="window.location='/allScorecards'">
+        <div class="adminOptions">
+            <input type="submit" id="insertScorecard" value="Insert Scorecard" class="buttons" onclick="window.location='/insertScorecard'">
         </div>
 
-        <div class= "adminOptions">
-                <input type="submit" id="allScorecardResults" value="View All Scorecard Results" class= "buttons" onclick="window.location='/allScoreCardResults'">
+        <div class="adminOptions">
+            <input type="submit" id="insertScorecardResults" value="Insert Scorecard Results" class="buttons" onclick="window.location='/insertScorecardResults'">
+        </div>
+
+        <div class="adminOptions">
+            <input type="submit" id="allScorecards" value="View All Scorecards" class="buttons" onclick="window.location='/allScorecards'">
+        </div>
+
+        <div class="adminOptions">
+            <input type="submit" id="allScorecardResults" value="View All Scorecard Results" class="buttons" onclick="window.location='/allScoreCardResults'">
         </div>
     </div>
 
@@ -62,6 +73,7 @@
         <input type="submit" id="back" value="Back" onclick="window.location='/index.html'">
     </div>
 </body>
-<script src="js/settings.js"></script>
-
+<script src="js/settings.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/menu.js"></script>
 </html>

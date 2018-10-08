@@ -2,55 +2,53 @@
     box-sizing: border-box;
 }
 
+
+/* Body CSS */
+
+body {
+    background-color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .container{
-    max-width: 500px; 
+    /* max-width: 500px;  */
     width: 100%;
 	/* 1366x768	16:9*/
     margin: auto;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
-form>div{
-    display: flex;
-    width: 500px;
-    margin: auto;
-    padding: 10px;
-    border-bottom: 1px solid #cccccc;
-    justify-content: center;
-}
 
-label{
-    flex-basis: 150px;
-}
+/* Header CSS */
 
-select{
-    height: 25px;
+header {
+    width: 100%;
 }
 
 h1{
     text-align: center;
+    color: #f0b240;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20pt;
 }
 
-.loginButtons{
-    -webkit-appearance: none;
-    width: 180px;
-    height: 30px;
-    text-align: center; 
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    color: black;
 }
-.buttons{
-    -webkit-appearance: none;
 
-    width: 200px;
-    height: 50px;
-}
-body {
-    background-color: #D6C9CC;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+/* Nav Bar CSS */
+
+.menu {
+    visibility: hidden;
+    display: none;
 }
 
 nav {
     width:100%;
-    background-color: black;
+    background-color: #6d6f70;
     height: 47px;
 }
 
@@ -59,7 +57,8 @@ nav ul {
     margin: 0px;
     padding: 0px;
     justify-content: flex-start;
-
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
 }
 
 nav ul li {
@@ -67,7 +66,7 @@ nav ul li {
     margin:0;
     padding: 8px;
     color: white;
-    border-bottom: 2px solid #000000;
+    /* border-bottom: 2px solid #000000; */
     margin-right: 20px;
 }
 
@@ -75,8 +74,10 @@ nav ul li a {
     text-decoration: none;
     display: block;
     color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    
 }
-
 
 nav ul li a:hover {
     color: #D6C9CC;
@@ -84,9 +85,10 @@ nav ul li a:hover {
 }
 
 nav ul li:hover {
-    border-bottom: 2px solid #FFFFFF;
+    /* border-bottom: 2px solid #FFFFFF; */
     font-size: 1.5em;
 }
+
 .flex-hang-right {
     margin-left: auto;
     margin-right: 10px;
@@ -112,6 +114,8 @@ nav ul li:hover {
     margin-top: 5px;
     width: 100px;
     height: 40px;
+    color: white;
+    background-color: #f0b240;
 }
 
 .large-centered-menu {
@@ -123,6 +127,7 @@ nav ul li:hover {
     height: 50px;
 
 }
+
 .flex-column {
     flex-direction: column;
 }
@@ -131,6 +136,28 @@ nav ul li:hover {
     margin-left: 35%;
 }
 
+
+/* Form CSS */
+
+form>div{
+    display: flex;
+    width: 500px;
+    margin: auto;
+    padding: 10px;
+    /* border-bottom: 1px solid #cccccc; */
+    justify-content: center;
+}
+
+label{
+    flex-basis: 150px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+select{
+    height: 25px;
+}
+  
 /* Admin CSS */
 
 #adminOptions {
@@ -147,6 +174,98 @@ nav ul li:hover {
     color:  red;
 }
 
+#insertScorecard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 10%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+#insertScorecardResults {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 15%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+
+/* Index CSS */
+#current_week {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+    color: #f0b240;
+}
+
+.banner {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+#index_banner_image {
+   width: 100%;
+}
+
+#homepage_header2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16pt;
+    color: #f0b240;
+}
+
+#prediction_button {
+    text-align: center;
+    margin: auto;
+    height: 30px;
+}
+
+#play {
+    width: 10%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+
+/* Login/Registration CSS */
+.loginButtons {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+    text-align: center; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+#login {
+    color: white;
+    /* background-color: #f0b240; */
+    width: 25%;
+    height: 45px;
+}
+
+.buttons {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 50px;
+}
+
+#registration_container {
+    background-color: transparent;
+}
+
+
+/* Leaderboards CSS */
+#leaderboards_container1, #leaderboards_container2, #leaderboards_container3 {
+    background-color: transparent;
+}
 #country{
     width: 135px;
 }
@@ -157,30 +276,174 @@ table {
     width: 100%;
 }
 
-td, th {
+td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
 }
 
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-/* Index CSS */
 
-#banner {
+/* Predictions CSS */
+#predictionsForm {
+    width: 100%;
+}
+
+#row1 {
+    width: 100%;
+}
+
+#row2 {
+    width: 100%;
+}
+
+.home_prediction {
+    width:25%;
+    height: 25%;
+    position: relative;
+    left: 3%;
+}
+
+.away_prediction {
+    width:20%;
+    height: 20%;
+    position: relative;
+    right: 3%;
+}
+
+#golden_goal_description {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 9pt;
+}
+
+#submit_predictions {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 100%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+/* Settings CSS */
+#settings_container {
+    background-color: transparent;
+}
+
+#back {
+    color: white;
+    background-color: #f0b240;
+    height: 45px;
+    width: 7.5%;
+}
+
+/* Insert Scorecard/Results  */
+#insert_scorecard {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 25%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+#insert_scorecard_results {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 35%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+}
+
+#allScorecards {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 10%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+} 
+
+
+#allScorecardResults {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10pt;
+    width: 15%;
+    height: 45px;
+    color: white;
+    background-color: #f0b240;
+} 
+
+/* Match CSS */
+
+.matchInfo {
     display: flex;
-    justify-content: center;
-    position: relative;
-    top: 25px;
 }
 
-#homepage_howtoplay_content {
-    position: relative;
-    top: 25px;
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: transparent;
+    width: 100%;
+}
+  
+.grid-item {
+    background-color: transparent;
+    flex-basis: 33%;
+    margin: 10px;
+    text-align: center;
+    border-left: 1px solid #6d6f70;
+    border-right: 1px solid #6d6f70;
 }
 
-#current_week {
+#roundDropdown {
+      width: 200px;
+      height: 30px;
+      margin: 15px;
+      color: #f0b240;
+}
+
+.home {
+    width:25%;
+    height: 25%;
     position: relative;
-    top: 25px;
+    left: 2.5%;
+}
+
+.versus {
+    width: 10%;
+    height: 10%;
+    margin: 1px;
+    text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+.quantity {
+    width: 25%;
+    height: 40%;
+    margin: 2px;
+    text-align: center;
+    margin: auto;
+}
+
+.away {
+    width: 25%;
+    height: 25%;
+    position: relative;
+    right: 2.5%;
 }
