@@ -58,7 +58,7 @@ form.addEventListener('submit', (ev) => {
       
       $.ajax(settingsForCalculating).done();
 
-
+      alert("Scorecard results inserted");
 
 });
 
