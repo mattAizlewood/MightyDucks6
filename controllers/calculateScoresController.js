@@ -229,6 +229,7 @@ module.exports = {
                 } else {
                     differenceInMins = Math.abs(minutesPrediction - scorecard.roundInfo.firstScorerMinutes);
                     if(differenceInMins <= 5) {
+                        differenceInMins = Math.abs(6-differenceInMins);
                         predictionScore = predictionScore + differenceInMins;
                     }
                 }
