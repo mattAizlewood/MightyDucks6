@@ -31,6 +31,8 @@ form.addEventListener('submit', (ev) => {
     }
 
     $.ajax(settings).done();
+
+    alert("Scorecard inserted");
 });
 
 document.getElementById("logout").addEventListener("click", function(){
